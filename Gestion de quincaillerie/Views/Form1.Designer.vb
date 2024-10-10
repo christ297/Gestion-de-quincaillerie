@@ -30,6 +30,7 @@ Partial Class Form1
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
+        Panel1 = New Panel()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -93,6 +94,13 @@ Partial Class Form1
         Label3.TabIndex = 6
         Label3.Text = "Label3"
         ' 
+        ' Panel1
+        ' 
+        Panel1.Location = New Point(1, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1386, 715)
+        Panel1.TabIndex = 7
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 25.0F)
@@ -105,6 +113,7 @@ Partial Class Form1
         Controls.Add(TextBox1)
         Controls.Add(PictureBox1)
         Controls.Add(Button1)
+        Controls.Add(Panel1)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
         Name = "Form1"
@@ -121,5 +130,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
 
 End Class
