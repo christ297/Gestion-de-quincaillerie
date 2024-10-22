@@ -1,4 +1,6 @@
 ﻿Public Class Form2
+
+    Dim collapsed As Boolean = True
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
@@ -20,6 +22,25 @@
         ' Panel2.Controls.Add(form3)
         ' Form3.Show()
 
+
+    End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel3.Size = Panel3.MinimumSize
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If collapsed Then
+            ' Panel3.Image =
+            Panel3.Height += 10
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Dashboard.Click
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class

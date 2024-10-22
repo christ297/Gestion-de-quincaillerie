@@ -23,110 +23,119 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Button1 = New Button()
+        connecter = New Button()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        email = New TextBox()
+        password = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
         Panel1 = New Panel()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Button1
+        ' connecter
         ' 
-        Button1.BackColor = SystemColors.MenuHighlight
-        Button1.Location = New Point(947, 434)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(255, 51)
-        Button1.TabIndex = 0
-        Button1.Text = "Se conneccter"
-        Button1.UseVisualStyleBackColor = False
+        connecter.BackColor = SystemColors.MenuHighlight
+        connecter.Font = New Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        connecter.ForeColor = SystemColors.ButtonHighlight
+        connecter.Location = New Point(1143, 506)
+        connecter.Name = "connecter"
+        connecter.Size = New Size(255, 51)
+        connecter.TabIndex = 0
+        connecter.Text = "Se conneccter"
+        connecter.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
         ' 
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.Location = New Point(1, 0)
+        PictureBox1.Location = New Point(11, 68)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(634, 715)
+        PictureBox1.Size = New Size(634, 718)
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
-        ' TextBox1
+        ' email
         ' 
-        TextBox1.Location = New Point(1013, 244)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(284, 31)
-        TextBox1.TabIndex = 2
+        email.Location = New Point(1114, 241)
+        email.Name = "email"
+        email.Size = New Size(354, 31)
+        email.TabIndex = 2
         ' 
-        ' TextBox2
+        ' password
         ' 
-        TextBox2.Location = New Point(1013, 341)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(284, 31)
-        TextBox2.TabIndex = 3
+        password.Location = New Point(1114, 359)
+        password.Name = "password"
+        'password.PasswordChar = "*"
+        password.Size = New Size(354, 31)
+        password.TabIndex = 3
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(866, 247)
+        Label1.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(1011, 241)
         Label1.Name = "Label1"
-        Label1.Size = New Size(63, 25)
+        Label1.Size = New Size(54, 26)
         Label1.TabIndex = 4
-        Label1.Text = "Label1"
+        Label1.Text = "Nom"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(866, 347)
+        Label2.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(885, 364)
         Label2.Name = "Label2"
-        Label2.Size = New Size(63, 25)
+        Label2.Size = New Size(180, 26)
         Label2.TabIndex = 5
-        Label2.Text = "Label2"
+        Label2.Text = "Mot de passe"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(1076, 94)
+        Label3.Font = New Font("Lucida Sans Typewriter", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(1046, 95)
         Label3.Name = "Label3"
-        Label3.Size = New Size(63, 25)
+        Label3.Size = New Size(422, 32)
         Label3.TabIndex = 6
-        Label3.Text = "Label3"
+        Label3.Text = "Connexion Administrateur"
         ' 
         ' Panel1
         ' 
+        Panel1.BackColor = SystemColors.ControlLightLight
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(connecter)
+        Panel1.Controls.Add(email)
+        Panel1.Controls.Add(password)
         Panel1.Location = New Point(1, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1386, 715)
+        Panel1.Size = New Size(1920, 1056)
         Panel1.TabIndex = 7
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1380, 710)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
-        Controls.Add(PictureBox1)
-        Controls.Add(Button1)
+        ClientSize = New Size(1920, 1020)
         Controls.Add(Panel1)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
         Name = "Form1"
         Text = "Gestion de quinaillerie"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents connecter As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents email As TextBox
+    Friend WithEvents password As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

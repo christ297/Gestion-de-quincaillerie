@@ -17,7 +17,6 @@
 
         ' Effacer uniquement les contrôles de Panel2, pas ceux de Form1
         mainPanel.Controls.Clear()
-
         ' Ajouter Form3 au Panel2 de Form1
         mainPanel.Controls.Add(form3)
         mainForm.Show()

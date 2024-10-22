@@ -9,9 +9,9 @@
     End Sub
     Public Sub openForm2()
         ' Nettoyer tous les contrôles de Form1 avant de charger Form2
+        mainPanel.Controls.Clear()
         mainForm.Controls.Clear()
         mainForm.Controls.Add(mainPanel)
-
 
         ' Créer une instance de Form2
         Dim form2 As New Form2()
