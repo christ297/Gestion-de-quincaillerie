@@ -5,12 +5,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles connecter.Click
-        '  If Me.email.Text = "christ" And Me.password.Text = "christ" Then
+        If Me.email.Text = "christ" And Me.password.Text = "christ" Then
 
-
-        Dim connection As New Connection(Panel1, Me)
+            Dim connection As New Connection(Panel1, Me)
             connection.openForm2()
-       ' End If
+
+        Else
+            MsgBox("Identifiant Incorrect", +vbExclamation, "Erreur d'authentification")
+        End If
+
 
 
 
@@ -37,4 +40,6 @@
     Private Sub Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+
 End Class

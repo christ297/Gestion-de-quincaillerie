@@ -1,4 +1,4 @@
-﻿Public Class Home
+﻿Public Class dashToProduits
 
     Private mainPanel As New Panel
     Private mainForm As New Form
@@ -18,7 +18,7 @@
         ' Effacer uniquement les contrôles de Panel2, pas ceux de Form1
         mainPanel.Controls.Clear()
         ' Ajouter Form3 au Panel2 de Form1
-        mainPanel.Controls.Add(Form3)
+        mainPanel.Controls.Add(Form4)
         mainForm.Show()
     End Sub
 End Class

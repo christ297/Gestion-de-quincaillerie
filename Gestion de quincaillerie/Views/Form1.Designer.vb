@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.Diagnostics.Eventing.Reader
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
@@ -67,7 +69,6 @@ Partial Class Form1
         ' 
         password.Location = New Point(1114, 359)
         password.Name = "password"
-        'password.PasswordChar = "*"
         password.Size = New Size(354, 31)
         password.TabIndex = 3
         ' 
@@ -118,7 +119,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1920, 1020)
         Controls.Add(Panel1)
