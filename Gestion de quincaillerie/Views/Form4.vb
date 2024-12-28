@@ -16,6 +16,10 @@
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = DataGridViewProduit.Rows(e.RowIndex)
             idProduit = Convert.ToInt32(selectedRow.Cells("idProduit").Value)
+            libelleProduit.Text = selectedRow.Cells("libelleProduit").Value
+            typeProduit.Text = selectedRow.Cells("categorieProduit").Value
+            prixProduit.Text = Convert.ToInt32(selectedRow.Cells("prixProduit").Value)
+            quantiteProduit.Text = Convert.ToInt32(selectedRow.Cells("quantiteProduit").Value)
             MsgBox("ID sélectionné : " & idProduit)
         End If
     End Sub

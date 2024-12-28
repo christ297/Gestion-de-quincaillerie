@@ -70,7 +70,7 @@ Partial Class Form4
         ' DataGridViewProduit
         ' 
         DataGridViewProduit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewProduit.Location = New Point(768, 125)
+        DataGridViewProduit.Location = New Point(683, 136)
         DataGridViewProduit.Name = "DataGridViewProduit"
         DataGridViewProduit.RowHeadersWidth = 280
         DataGridViewProduit.Size = New Size(646, 553)
@@ -79,7 +79,7 @@ Partial Class Form4
         ' libelleProduit
         ' 
         libelleProduit.Font = New Font("Segoe UI", 12F)
-        libelleProduit.Location = New Point(299, 162)
+        libelleProduit.Location = New Point(314, 159)
         libelleProduit.Name = "libelleProduit"
         libelleProduit.PlaceholderText = "Entrer le libellé du profuit"
         libelleProduit.Size = New Size(277, 34)
@@ -88,7 +88,7 @@ Partial Class Form4
         ' prixProduit
         ' 
         prixProduit.Font = New Font("Segoe UI", 12F)
-        prixProduit.Location = New Point(299, 414)
+        prixProduit.Location = New Point(297, 451)
         prixProduit.Name = "prixProduit"
         prixProduit.PlaceholderText = "Entrer le prix du produit"
         prixProduit.Size = New Size(277, 34)
@@ -98,7 +98,7 @@ Partial Class Form4
         ' 
         label.AutoSize = True
         label.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        label.Location = New Point(86, 162)
+        label.Location = New Point(76, 159)
         label.Name = "label"
         label.Size = New Size(163, 31)
         label.TabIndex = 7
@@ -108,7 +108,7 @@ Partial Class Form4
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(86, 239)
+        Label3.Location = New Point(76, 253)
         Label3.Name = "Label3"
         Label3.Size = New Size(103, 31)
         Label3.TabIndex = 8
@@ -118,7 +118,7 @@ Partial Class Form4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 13.8F)
-        Label4.Location = New Point(86, 414)
+        Label4.Location = New Point(76, 452)
         Label4.Name = "Label4"
         Label4.Size = New Size(52, 31)
         Label4.TabIndex = 9
@@ -127,7 +127,7 @@ Partial Class Form4
         ' Button1
         ' 
         Button1.Font = New Font("Segoe UI", 13.8F)
-        Button1.Location = New Point(50, 542)
+        Button1.Location = New Point(48, 604)
         Button1.Name = "Button1"
         Button1.Size = New Size(156, 48)
         Button1.TabIndex = 10
@@ -137,7 +137,7 @@ Partial Class Form4
         ' Button2
         ' 
         Button2.Font = New Font("Segoe UI", 13.8F)
-        Button2.Location = New Point(238, 542)
+        Button2.Location = New Point(260, 604)
         Button2.Name = "Button2"
         Button2.Size = New Size(154, 48)
         Button2.TabIndex = 11
@@ -147,7 +147,7 @@ Partial Class Form4
         ' Button3
         ' 
         Button3.Font = New Font("Segoe UI", 13.8F)
-        Button3.Location = New Point(428, 542)
+        Button3.Location = New Point(473, 604)
         Button3.Name = "Button3"
         Button3.Size = New Size(148, 48)
         Button3.TabIndex = 12
@@ -157,7 +157,7 @@ Partial Class Form4
         ' quantiteProduit
         ' 
         quantiteProduit.Font = New Font("Segoe UI", 12F)
-        quantiteProduit.Location = New Point(297, 239)
+        quantiteProduit.Location = New Point(316, 253)
         quantiteProduit.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         quantiteProduit.Name = "quantiteProduit"
         quantiteProduit.Size = New Size(277, 34)
@@ -168,7 +168,7 @@ Partial Class Form4
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 13.8F)
-        Label5.Location = New Point(86, 320)
+        Label5.Location = New Point(76, 358)
         Label5.Name = "Label5"
         Label5.Size = New Size(143, 31)
         Label5.TabIndex = 14
@@ -178,7 +178,7 @@ Partial Class Form4
         ' 
         typeProduit.Font = New Font("Segoe UI", 12F)
         typeProduit.FormattingEnabled = True
-        typeProduit.Location = New Point(297, 320)
+        typeProduit.Location = New Point(316, 358)
         typeProduit.Name = "typeProduit"
         typeProduit.Size = New Size(279, 36)
         typeProduit.TabIndex = 15

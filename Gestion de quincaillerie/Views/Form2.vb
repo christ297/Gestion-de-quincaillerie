@@ -6,6 +6,9 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.Size = New Size(800, 800)
+
         Panel3.Size = Panel3.MinimumSize
         Panel4.Size = Panel4.MinimumSize
         Dim client As New Clients()
@@ -98,5 +101,23 @@
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles countClient.Click
 
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim home As New Facture(Panel2, Form6)
+        home.open1()
+    End Sub
+
+    Private Sub countA_Click(sender As Object, e As EventArgs) Handles countA.Click
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim home As New Facture(Panel2, Form6)
+        home.open1()
     End Sub
 End Class

@@ -33,6 +33,9 @@ Partial Class Form1
         Label2 = New Label()
         Label3 = New Label()
         Panel1 = New Panel()
+        Label4 = New Label()
+        ComboBox1 = New ComboBox()
+        CheckBox1 = New CheckBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -42,7 +45,7 @@ Partial Class Form1
         connecter.BackColor = SystemColors.MenuHighlight
         connecter.Font = New Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         connecter.ForeColor = SystemColors.ButtonHighlight
-        connecter.Location = New Point(1143, 506)
+        connecter.Location = New Point(1141, 571)
         connecter.Name = "connecter"
         connecter.Size = New Size(255, 51)
         connecter.TabIndex = 0
@@ -62,15 +65,18 @@ Partial Class Form1
         ' 
         email.Location = New Point(1114, 241)
         email.Name = "email"
+        email.PlaceholderText = "Entrer votre nom"
         email.Size = New Size(354, 31)
         email.TabIndex = 2
         ' 
         ' password
         ' 
-        password.Location = New Point(1114, 359)
+        password.Location = New Point(1114, 431)
         password.Name = "password"
+        password.PlaceholderText = "Entrer votre mot de passe"
         password.Size = New Size(354, 31)
         password.TabIndex = 3
+        password.UseSystemPasswordChar = True
         ' 
         ' Label1
         ' 
@@ -86,7 +92,7 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(885, 364)
+        Label2.Location = New Point(900, 436)
         Label2.Name = "Label2"
         Label2.Size = New Size(180, 26)
         Label2.TabIndex = 5
@@ -104,7 +110,10 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = SystemColors.ControlLightLight
+        Panel1.BackColor = Color.White
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(ComboBox1)
+        Panel1.Controls.Add(CheckBox1)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label3)
@@ -114,14 +123,43 @@ Partial Class Form1
         Panel1.Controls.Add(password)
         Panel1.Location = New Point(1, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1920, 1056)
+        Panel1.Size = New Size(1960, 1080)
         Panel1.TabIndex = 7
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(1006, 342)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(59, 31)
+        Label4.TabIndex = 9
+        Label4.Text = "Rôle"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Items.AddRange(New Object() {"Directeur", "Caissière"})
+        ComboBox1.Location = New Point(1114, 342)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(354, 33)
+        ComboBox1.TabIndex = 8
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(1290, 493)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(178, 29)
+        CheckBox1.TabIndex = 7
+        CheckBox1.Text = "Voir mot de passe"
+        CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1920, 1020)
+        ClientSize = New Size(1924, 1033)
         Controls.Add(Panel1)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
@@ -141,5 +179,8 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label4 As Label
 
 End Class

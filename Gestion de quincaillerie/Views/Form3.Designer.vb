@@ -132,10 +132,15 @@ Partial Class Form3
         ' 
         ' DataGridViewClient
         ' 
+        DataGridViewClient.AllowUserToAddRows = False
+        DataGridViewClient.AllowUserToDeleteRows = False
+        DataGridViewClient.AllowUserToResizeColumns = False
+        DataGridViewClient.AllowUserToResizeRows = False
         DataGridViewClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewClient.Location = New Point(688, 91)
+        DataGridViewClient.Location = New Point(676, 204)
         DataGridViewClient.Name = "DataGridViewClient"
         DataGridViewClient.RowHeadersWidth = 280
+        DataGridViewClient.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridViewClient.Size = New Size(646, 553)
         DataGridViewClient.TabIndex = 19
         ' 
@@ -179,6 +184,7 @@ Partial Class Form3
         pbxImage.Location = New Point(12, 110)
         pbxImage.Name = "pbxImage"
         pbxImage.Size = New Size(158, 171)
+        pbxImage.SizeMode = PictureBoxSizeMode.StretchImage
         pbxImage.TabIndex = 32
         pbxImage.TabStop = False
         ' 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form6
+Partial Class Form7
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -23,39 +23,25 @@ Partial Class Form6
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Button1 = New Button()
         SuspendLayout()
         ' 
         ' ReportViewer1
         ' 
-        ReportViewer1.LocalReport.ReportPath = "C:\Users\KELI\source\repos\Gestion de quincaillerie\Gestion de quincaillerie\Report1.rdlc"
         ReportViewer1.Location = New Point(0, 0)
         ReportViewer1.Name = "ReportViewer"
         ReportViewer1.ServerReport.BearerToken = Nothing
         ReportViewer1.Size = New Size(396, 246)
         ReportViewer1.TabIndex = 0
         ' 
-        ' Button1
+        ' Form7
         ' 
-        Button1.Location = New Point(340, 211)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 0
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Form6
-        ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1166, 470)
-        Controls.Add(Button1)
-        Margin = New Padding(3, 2, 3, 2)
-        Name = "Form6"
-        Text = "Form6"
+        ClientSize = New Size(1291, 615)
+        Name = "Form7"
+        Text = "Form7"
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents Button1 As Button
 End Class

@@ -44,6 +44,12 @@ Public Class Form3
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = DataGridViewClient.Rows(e.RowIndex)
             idClient = Convert.ToInt32(selectedRow.Cells("idClient").Value)
+            nomClient.Text = selectedRow.Cells("nomClient").Value
+            prenomsClient.Text = selectedRow.Cells("prenomsClient").Value
+            numClient.Text = selectedRow.Cells("numClient").Value
+            filePath = selectedRow.Cells("photo").Value
+            pbxImage.Image = Image.FromFile(filePath)
+
             MsgBox("ID sélectionné : " & idClient)
         End If
     End Sub

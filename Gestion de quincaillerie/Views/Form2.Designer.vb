@@ -34,8 +34,8 @@ Partial Class Form2
         Button4 = New Button()
         Button3 = New Button()
         dashboard = New Button()
-        Button1 = New Button()
         Panel2 = New Panel()
+        Button8 = New Button()
         Panel8 = New Panel()
         nombreClients = New Label()
         countClient = New Label()
@@ -66,8 +66,9 @@ Partial Class Form2
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Panel3)
         Panel1.Location = New Point(3, 0)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1370, 1022)
+        Panel1.Size = New Size(1199, 766)
         Panel1.TabIndex = 0
         ' 
         ' Panel4
@@ -78,11 +79,12 @@ Partial Class Form2
         Panel4.Controls.Add(Button7)
         Panel4.Controls.Add(outils)
         Panel4.Dock = DockStyle.Top
-        Panel4.Location = New Point(0, 298)
-        Panel4.MaximumSize = New Size(250, 298)
-        Panel4.MinimumSize = New Size(250, 65)
+        Panel4.Location = New Point(0, 224)
+        Panel4.Margin = New Padding(3, 2, 3, 2)
+        Panel4.MaximumSize = New Size(219, 224)
+        Panel4.MinimumSize = New Size(219, 49)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(250, 298)
+        Panel4.Size = New Size(219, 224)
         Panel4.TabIndex = 1
         ' 
         ' Button2
@@ -91,9 +93,10 @@ Partial Class Form2
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(0, 80)
+        Button2.Location = New Point(0, 60)
+        Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
-        Button2.Size = New Size(250, 39)
+        Button2.Size = New Size(219, 29)
         Button2.TabIndex = 3
         Button2.Text = "Tableau de bord"
         Button2.UseVisualStyleBackColor = False
@@ -104,9 +107,10 @@ Partial Class Form2
         Button6.FlatAppearance.BorderSize = 0
         Button6.FlatStyle = FlatStyle.Flat
         Button6.ForeColor = SystemColors.ControlLightLight
-        Button6.Location = New Point(0, 145)
+        Button6.Location = New Point(0, 109)
+        Button6.Margin = New Padding(3, 2, 3, 2)
         Button6.Name = "Button6"
-        Button6.Size = New Size(250, 39)
+        Button6.Size = New Size(219, 29)
         Button6.TabIndex = 2
         Button6.Text = "Factures"
         Button6.UseVisualStyleBackColor = False
@@ -117,9 +121,10 @@ Partial Class Form2
         Button7.FlatAppearance.BorderSize = 0
         Button7.FlatStyle = FlatStyle.Flat
         Button7.ForeColor = SystemColors.ControlLightLight
-        Button7.Location = New Point(0, 213)
+        Button7.Location = New Point(0, 184)
+        Button7.Margin = New Padding(3, 2, 3, 2)
         Button7.Name = "Button7"
-        Button7.Size = New Size(250, 39)
+        Button7.Size = New Size(219, 29)
         Button7.TabIndex = 1
         Button7.Text = "Se Déconnecter"
         Button7.UseVisualStyleBackColor = False
@@ -129,11 +134,11 @@ Partial Class Form2
         outils.FlatAppearance.BorderSize = 0
         outils.FlatStyle = FlatStyle.Flat
         outils.ForeColor = SystemColors.ControlLightLight
-        outils.Image = My.Resources.Resources.icons8_left_arrow_30
         outils.ImageAlign = ContentAlignment.MiddleLeft
-        outils.Location = New Point(3, 3)
+        outils.Location = New Point(3, 2)
+        outils.Margin = New Padding(3, 2, 3, 2)
         outils.Name = "outils"
-        outils.Size = New Size(244, 52)
+        outils.Size = New Size(214, 39)
         outils.TabIndex = 0
         outils.Text = "Outils"
         outils.UseVisualStyleBackColor = True
@@ -147,10 +152,11 @@ Partial Class Form2
         Panel3.Controls.Add(dashboard)
         Panel3.Dock = DockStyle.Top
         Panel3.Location = New Point(0, 0)
-        Panel3.MaximumSize = New Size(250, 298)
-        Panel3.MinimumSize = New Size(250, 65)
+        Panel3.Margin = New Padding(3, 2, 3, 2)
+        Panel3.MaximumSize = New Size(219, 224)
+        Panel3.MinimumSize = New Size(219, 49)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(250, 298)
+        Panel3.Size = New Size(219, 224)
         Panel3.TabIndex = 0
         ' 
         ' Button5
@@ -159,9 +165,10 @@ Partial Class Form2
         Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = SystemColors.ControlLightLight
-        Button5.Location = New Point(0, 80)
+        Button5.Location = New Point(0, 60)
+        Button5.Margin = New Padding(3, 2, 3, 2)
         Button5.Name = "Button5"
-        Button5.Size = New Size(250, 39)
+        Button5.Size = New Size(219, 29)
         Button5.TabIndex = 3
         Button5.Text = "Clients"
         Button5.UseVisualStyleBackColor = False
@@ -172,9 +179,10 @@ Partial Class Form2
         Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ControlLightLight
-        Button4.Location = New Point(0, 145)
+        Button4.Location = New Point(0, 109)
+        Button4.Margin = New Padding(3, 2, 3, 2)
         Button4.Name = "Button4"
-        Button4.Size = New Size(250, 39)
+        Button4.Size = New Size(219, 29)
         Button4.TabIndex = 2
         Button4.Text = "Produits"
         Button4.UseVisualStyleBackColor = False
@@ -185,9 +193,10 @@ Partial Class Form2
         Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ControlLightLight
-        Button3.Location = New Point(0, 213)
+        Button3.Location = New Point(0, 159)
+        Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
-        Button3.Size = New Size(250, 39)
+        Button3.Size = New Size(219, 29)
         Button3.TabIndex = 1
         Button3.Text = "Achats"
         Button3.UseVisualStyleBackColor = False
@@ -198,45 +207,47 @@ Partial Class Form2
         dashboard.FlatAppearance.BorderSize = 0
         dashboard.FlatStyle = FlatStyle.Flat
         dashboard.ForeColor = SystemColors.ControlLightLight
-        dashboard.Image = My.Resources.Resources.left_arrow1
         dashboard.ImageAlign = ContentAlignment.MiddleLeft
-        dashboard.Location = New Point(3, 3)
+        dashboard.Location = New Point(3, 2)
+        dashboard.Margin = New Padding(3, 2, 3, 2)
         dashboard.Name = "dashboard"
-        dashboard.Size = New Size(244, 52)
+        dashboard.Size = New Size(214, 39)
         dashboard.TabIndex = 0
         dashboard.Text = "Menu"
         dashboard.UseVisualStyleBackColor = False
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(15, 567)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(163, 29)
-        Button1.TabIndex = 0
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' Panel2
         ' 
         Panel2.BackColor = SystemColors.ActiveBorder
+        Panel2.Controls.Add(Button8)
         Panel2.Controls.Add(Panel8)
         Panel2.Controls.Add(Panel7)
         Panel2.Controls.Add(Panel6)
         Panel2.Controls.Add(Panel5)
-        Panel2.Controls.Add(Button1)
-        Panel2.Location = New Point(259, 0)
+        Panel2.Location = New Point(227, 0)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1663, 1025)
+        Panel2.Size = New Size(1465, 766)
         Panel2.TabIndex = 1
+        ' 
+        ' Button8
+        ' 
+        Button8.Location = New Point(92, 299)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(75, 23)
+        Button8.TabIndex = 4
+        Button8.Text = "Button8"
+        Button8.UseVisualStyleBackColor = True
         ' 
         ' Panel8
         ' 
         Panel8.BackColor = Color.Brown
         Panel8.Controls.Add(nombreClients)
         Panel8.Controls.Add(countClient)
-        Panel8.Location = New Point(1333, 94)
+        Panel8.Location = New Point(1025, 70)
+        Panel8.Margin = New Padding(3, 2, 3, 2)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(316, 128)
+        Panel8.Size = New Size(276, 96)
         Panel8.TabIndex = 3
         ' 
         ' nombreClients
@@ -244,9 +255,9 @@ Partial Class Form2
         nombreClients.AutoSize = True
         nombreClients.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         nombreClients.ForeColor = SystemColors.ButtonHighlight
-        nombreClients.Location = New Point(132, 11)
+        nombreClients.Location = New Point(116, 8)
         nombreClients.Name = "nombreClients"
-        nombreClients.Size = New Size(83, 31)
+        nombreClients.Size = New Size(69, 25)
         nombreClients.TabIndex = 1
         nombreClients.Text = "Clients"
         ' 
@@ -255,9 +266,9 @@ Partial Class Form2
         countClient.AutoSize = True
         countClient.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         countClient.ForeColor = SystemColors.ButtonHighlight
-        countClient.Location = New Point(159, 52)
+        countClient.Location = New Point(139, 39)
         countClient.Name = "countClient"
-        countClient.Size = New Size(34, 38)
+        countClient.Size = New Size(27, 30)
         countClient.TabIndex = 0
         countClient.Text = "C"
         ' 
@@ -266,9 +277,10 @@ Partial Class Form2
         Panel7.BackColor = Color.Khaki
         Panel7.Controls.Add(Label3)
         Panel7.Controls.Add(countp)
-        Panel7.Location = New Point(912, 94)
+        Panel7.Location = New Point(698, 70)
+        Panel7.Margin = New Padding(3, 2, 3, 2)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(316, 128)
+        Panel7.Size = New Size(276, 96)
         Panel7.TabIndex = 2
         ' 
         ' Label3
@@ -276,9 +288,9 @@ Partial Class Form2
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ButtonHighlight
-        Label3.Location = New Point(27, 11)
+        Label3.Location = New Point(24, 8)
         Label3.Name = "Label3"
-        Label3.Size = New Size(269, 31)
+        Label3.Size = New Size(222, 25)
         Label3.TabIndex = 1
         Label3.Text = " Produits Approvisionnés"
         ' 
@@ -287,9 +299,9 @@ Partial Class Form2
         countp.AutoSize = True
         countp.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         countp.ForeColor = SystemColors.ButtonHighlight
-        countp.Location = New Point(152, 51)
+        countp.Location = New Point(133, 38)
         countp.Name = "countp"
-        countp.Size = New Size(31, 38)
+        countp.Size = New Size(24, 30)
         countp.TabIndex = 0
         countp.Text = "L"
         countp.TextAlign = ContentAlignment.MiddleCenter
@@ -299,9 +311,10 @@ Partial Class Form2
         Panel6.BackColor = SystemColors.Highlight
         Panel6.Controls.Add(Label4)
         Panel6.Controls.Add(restantStock)
-        Panel6.Location = New Point(507, 94)
+        Panel6.Location = New Point(372, 70)
+        Panel6.Margin = New Padding(3, 2, 3, 2)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(316, 128)
+        Panel6.Size = New Size(276, 96)
         Panel6.TabIndex = 2
         ' 
         ' Label4
@@ -309,9 +322,9 @@ Partial Class Form2
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = SystemColors.ButtonHighlight
-        Label4.Location = New Point(61, 11)
+        Label4.Location = New Point(53, 8)
         Label4.Name = "Label4"
-        Label4.Size = New Size(200, 31)
+        Label4.Size = New Size(165, 25)
         Label4.TabIndex = 4
         Label4.Text = "Produits En Stocks"
         ' 
@@ -320,9 +333,9 @@ Partial Class Form2
         restantStock.AutoSize = True
         restantStock.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         restantStock.ForeColor = SystemColors.ButtonHighlight
-        restantStock.Location = New Point(135, 52)
+        restantStock.Location = New Point(118, 39)
         restantStock.Name = "restantStock"
-        restantStock.Size = New Size(31, 38)
+        restantStock.Size = New Size(24, 30)
         restantStock.TabIndex = 0
         restantStock.Text = "L"
         ' 
@@ -331,9 +344,10 @@ Partial Class Form2
         Panel5.BackColor = Color.Green
         Panel5.Controls.Add(Label2)
         Panel5.Controls.Add(countA)
-        Panel5.Location = New Point(85, 94)
+        Panel5.Location = New Point(33, 70)
+        Panel5.Margin = New Padding(3, 2, 3, 2)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(316, 128)
+        Panel5.Size = New Size(276, 96)
         Panel5.TabIndex = 1
         ' 
         ' Label2
@@ -341,9 +355,9 @@ Partial Class Form2
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonFace
-        Label2.Location = New Point(56, 11)
+        Label2.Location = New Point(49, 8)
         Label2.Name = "Label2"
-        Label2.Size = New Size(186, 31)
+        Label2.Size = New Size(153, 25)
         Label2.TabIndex = 1
         Label2.Text = "Produits Achetés"
         ' 
@@ -352,9 +366,9 @@ Partial Class Form2
         countA.AutoSize = True
         countA.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         countA.ForeColor = SystemColors.ButtonHighlight
-        countA.Location = New Point(136, 52)
+        countA.Location = New Point(119, 39)
         countA.Name = "countA"
-        countA.Size = New Size(31, 38)
+        countA.Size = New Size(24, 30)
         countA.TabIndex = 0
         countA.Text = "L"
         ' 
@@ -368,11 +382,12 @@ Partial Class Form2
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1920, 1020)
+        ClientSize = New Size(1348, 634)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "Form2"
         Text = "Form2"
         Panel1.ResumeLayout(False)
@@ -417,4 +432,5 @@ Partial Class Form2
     Friend WithEvents Label4 As Label
     Friend WithEvents nombreClients As Label
     Friend WithEvents countClient As Label
+    Friend WithEvents Button8 As Button
 End Class

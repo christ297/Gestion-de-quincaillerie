@@ -41,5 +41,17 @@
 
     End Sub
 
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            password.UseSystemPasswordChar = False
 
+        Else
+            password.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+
+    End Sub
 End Class

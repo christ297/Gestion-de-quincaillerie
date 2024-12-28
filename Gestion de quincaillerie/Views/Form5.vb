@@ -1,4 +1,7 @@
 ﻿Imports System.Diagnostics.Metrics
+Imports QuestPDF.Fluent
+Imports QuestPDF.Helpers
+Imports QuestPDF.Infrastructure
 
 Public Class Form5
     Public idAchat As Integer
@@ -47,6 +50,10 @@ Public Class Form5
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = AchatsTableview.Rows(e.RowIndex)
             idAchat = Convert.ToInt32(selectedRow.Cells("idAchat").Value)
+            quantiteAchat.Text = selectedRow.Cells("quantiteAchat").Value
+            nomClientBox.Text = Convert.ToInt32(selectedRow.Cells("refClient").Value)
+            libelleProductBox.Text = selectedRow.Cells("refProduit").Value
+
             MsgBox("ID sélectionné : " & idAchat)
         End If
     End Sub
@@ -76,5 +83,9 @@ Public Class Form5
 
         nomClientBox.DisplayMember = "Nom" ' Ce qui est affiché
         nomClientBox.ValueMember = "ID" ' Ce qui est utilisé
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
