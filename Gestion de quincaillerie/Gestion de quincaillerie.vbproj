@@ -7,8 +7,8 @@
     <StartupObject>Gestion_de_quincaillerie.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+	  <Nullable>enable</Nullable>
 	  <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
-	  <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
 
   </PropertyGroup>
 

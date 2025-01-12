@@ -16,7 +16,7 @@
 
         ' Effacer uniquement les contrôles de Panel2, pas ceux de Form1
         mainPanel.Controls.Clear()
-        mainPanel.Controls.Add(Form6)
+        mainPanel.Controls.Add(mainForm)
         mainForm.Show()
     End Sub
 End Class

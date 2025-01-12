@@ -23,7 +23,7 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Label1 = New Label()
-        TextBox1 = New TextBox()
+        searchBox = New TextBox()
         PictureBox1 = New PictureBox()
         DataGridViewProduit = New DataGridView()
         libelleProduit = New TextBox()
@@ -31,9 +31,9 @@ Partial Class Form4
         label = New Label()
         Label3 = New Label()
         Label4 = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
+        add = New Button()
+        update = New Button()
+        delete = New Button()
         quantiteProduit = New NumericUpDown()
         Label5 = New Label()
         typeProduit = New ComboBox()
@@ -45,35 +45,37 @@ Partial Class Form4
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(13, 10)
+        Label1.Location = New Point(13, 11)
         Label1.Name = "Label1"
         Label1.Size = New Size(63, 20)
         Label1.TabIndex = 0
         Label1.Text = "Produits"
         ' 
-        ' TextBox1
+        ' searchBox
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(428, 17)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(650, 34)
-        TextBox1.TabIndex = 1
+        searchBox.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        searchBox.Location = New Point(427, 17)
+        searchBox.Name = "searchBox"
+        searchBox.Size = New Size(650, 34)
+        searchBox.TabIndex = 1
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Location = New Point(1099, 19)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(68, 32)
+        PictureBox1.Size = New Size(69, 32)
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
         ' 
         ' DataGridViewProduit
         ' 
+        DataGridViewProduit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewProduit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewProduit.Location = New Point(683, 136)
         DataGridViewProduit.Name = "DataGridViewProduit"
+        DataGridViewProduit.RowHeadersVisible = False
         DataGridViewProduit.RowHeadersWidth = 280
-        DataGridViewProduit.Size = New Size(646, 553)
+        DataGridViewProduit.Size = New Size(577, 456)
         DataGridViewProduit.TabIndex = 3
         ' 
         ' libelleProduit
@@ -98,7 +100,7 @@ Partial Class Form4
         ' 
         label.AutoSize = True
         label.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        label.Location = New Point(76, 159)
+        label.Location = New Point(75, 159)
         label.Name = "label"
         label.Size = New Size(163, 31)
         label.TabIndex = 7
@@ -108,7 +110,7 @@ Partial Class Form4
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(76, 253)
+        Label3.Location = New Point(75, 253)
         Label3.Name = "Label3"
         Label3.Size = New Size(103, 31)
         Label3.TabIndex = 8
@@ -118,46 +120,46 @@ Partial Class Form4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 13.8F)
-        Label4.Location = New Point(76, 452)
+        Label4.Location = New Point(75, 452)
         Label4.Name = "Label4"
         Label4.Size = New Size(52, 31)
         Label4.TabIndex = 9
         Label4.Text = "Prix"
         ' 
-        ' Button1
+        ' add
         ' 
-        Button1.Font = New Font("Segoe UI", 13.8F)
-        Button1.Location = New Point(48, 604)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(156, 48)
-        Button1.TabIndex = 10
-        Button1.Text = "Ajouter"
-        Button1.UseVisualStyleBackColor = True
+        add.Font = New Font("Segoe UI", 13.8F)
+        add.Location = New Point(48, 604)
+        add.Name = "add"
+        add.Size = New Size(155, 48)
+        add.TabIndex = 10
+        add.Text = "Ajouter"
+        add.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' update
         ' 
-        Button2.Font = New Font("Segoe UI", 13.8F)
-        Button2.Location = New Point(260, 604)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(154, 48)
-        Button2.TabIndex = 11
-        Button2.Text = "Modifier"
-        Button2.UseVisualStyleBackColor = True
+        update.Font = New Font("Segoe UI", 13.8F)
+        update.Location = New Point(261, 604)
+        update.Name = "update"
+        update.Size = New Size(154, 48)
+        update.TabIndex = 11
+        update.Text = "Modifier"
+        update.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' delete
         ' 
-        Button3.Font = New Font("Segoe UI", 13.8F)
-        Button3.Location = New Point(473, 604)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(148, 48)
-        Button3.TabIndex = 12
-        Button3.Text = "Supprimer"
-        Button3.UseVisualStyleBackColor = True
+        delete.Font = New Font("Segoe UI", 13.8F)
+        delete.Location = New Point(473, 604)
+        delete.Name = "delete"
+        delete.Size = New Size(149, 48)
+        delete.TabIndex = 12
+        delete.Text = "Supprimer"
+        delete.UseVisualStyleBackColor = True
         ' 
         ' quantiteProduit
         ' 
         quantiteProduit.Font = New Font("Segoe UI", 12F)
-        quantiteProduit.Location = New Point(316, 253)
+        quantiteProduit.Location = New Point(315, 296)
         quantiteProduit.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         quantiteProduit.Name = "quantiteProduit"
         quantiteProduit.Size = New Size(277, 34)
@@ -168,7 +170,7 @@ Partial Class Form4
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 13.8F)
-        Label5.Location = New Point(76, 358)
+        Label5.Location = New Point(75, 357)
         Label5.Name = "Label5"
         Label5.Size = New Size(143, 31)
         Label5.TabIndex = 14
@@ -178,7 +180,7 @@ Partial Class Form4
         ' 
         typeProduit.Font = New Font("Segoe UI", 12F)
         typeProduit.FormattingEnabled = True
-        typeProduit.Location = New Point(316, 358)
+        typeProduit.Location = New Point(315, 357)
         typeProduit.Name = "typeProduit"
         typeProduit.Size = New Size(279, 36)
         typeProduit.TabIndex = 15
@@ -187,13 +189,13 @@ Partial Class Form4
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1436, 690)
+        ClientSize = New Size(1435, 691)
         Controls.Add(typeProduit)
         Controls.Add(Label5)
         Controls.Add(quantiteProduit)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(delete)
+        Controls.Add(update)
+        Controls.Add(add)
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(label)
@@ -201,7 +203,7 @@ Partial Class Form4
         Controls.Add(libelleProduit)
         Controls.Add(DataGridViewProduit)
         Controls.Add(PictureBox1)
-        Controls.Add(TextBox1)
+        Controls.Add(searchBox)
         Controls.Add(Label1)
         Name = "Form4"
         Text = "Form4"
@@ -213,7 +215,7 @@ Partial Class Form4
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents searchBox As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridViewProduit As DataGridView
     Friend WithEvents libelleProduit As TextBox
@@ -227,4 +229,7 @@ Partial Class Form4
     Friend WithEvents quantiteProduit As NumericUpDown
     Friend WithEvents Label5 As Label
     Friend WithEvents typeProduit As ComboBox
+    Friend WithEvents add As Button
+    Friend WithEvents update As Button
+    Friend WithEvents delete As Button
 End Class

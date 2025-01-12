@@ -20,7 +20,7 @@ Public Class Form5
         Dim insertAchat As New Achats()
         idProduit = DirectCast(libelleProductBox.SelectedItem, Object).ID
         idClient = DirectCast(nomClientBox.SelectedItem, Object).ID
-        insertAchat.InsertAchat(quantiteAchat.Text, idProduit, idClient)
+        insertAchat.InsertAchat(quantiteAchat.Text, idClient, idProduit)
         Dim dataTable As New Achats()
         dataTable.LoadAchatsTables(AchatsTableview)
 

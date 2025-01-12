@@ -24,6 +24,8 @@ Partial Class Form6
     Private Sub InitializeComponent()
         ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Button1 = New Button()
+        facture = New DataGridView()
+        CType(facture, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ReportViewer1
@@ -37,25 +39,37 @@ Partial Class Form6
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(340, 211)
+        Button1.Location = New Point(593, 534)
+        Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
+        Button1.Size = New Size(86, 31)
         Button1.TabIndex = 0
-        Button1.Text = "Button1"
+        Button1.Text = "Imprimerie"
         Button1.UseVisualStyleBackColor = True
+        ' 
+        ' facture
+        ' 
+        facture.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        facture.Location = New Point(38, 30)
+        facture.Name = "facture"
+        facture.RowHeadersWidth = 51
+        facture.Size = New Size(1228, 458)
+        facture.TabIndex = 1
         ' 
         ' Form6
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1166, 470)
+        ClientSize = New Size(1333, 627)
+        Controls.Add(facture)
         Controls.Add(Button1)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Form6"
         Text = "Form6"
+        CType(facture, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Button1 As Button
+    Friend WithEvents facture As DataGridView
 End Class

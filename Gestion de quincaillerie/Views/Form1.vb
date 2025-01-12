@@ -1,11 +1,23 @@
-﻿Public Class Form1
+﻿Imports Microsoft.CodeAnalysis.VisualBasic.Syntax
+
+Public Class Form1
+    Public Shared Property roleUser As String
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles connecter.Click
-        If Me.email.Text = "christ" And Me.password.Text = "christ" Then
+        roleUser = role.Text
+        MessageBox.Show(roleUser)
+
+
+        If Me.email.Text = "christ" And Me.password.Text = "christ" And role.Text = "Directeur" Then
+
+            Dim connection As New Connection(Panel1, Me)
+            connection.openForm2()
+        ElseIf Me.email.Text = "caisse" And Me.password.Text = "caisse" And role.Text = "Caissiere" Then
 
             Dim connection As New Connection(Panel1, Me)
             connection.openForm2()
@@ -13,8 +25,6 @@
         Else
             MsgBox("Identifiant Incorrect", +vbExclamation, "Erreur d'authentification")
         End If
-
-
 
 
         ' Nettoyer tous les contrôles de Form1 avant de charger Form2
@@ -32,6 +42,8 @@
         'Panel1.Controls.Add(form2)
         ' Form2.Show()
     End Sub
+
+
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
@@ -52,6 +64,11 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+
+
+    End Sub
+
+    Private Sub role_SelectedIndexChanged(sender As Object, e As EventArgs) Handles role.SelectedIndexChanged
 
     End Sub
 End Class

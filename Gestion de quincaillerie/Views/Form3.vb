@@ -6,6 +6,7 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim client As New Clients()
         client.LoadClientsTables(DataGridViewClient)
+        Me.Refresh()
     End Sub
 
     Private Sub btnCharger_Click(sender As Object, e As EventArgs) Handles btnCharger.Click
@@ -58,6 +59,12 @@ Public Class Form3
         Dim client As New Clients()
         client.DeleteClient(idClient)
         client.LoadClientsTables(DataGridViewClient)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles search.TextChanged
+        Dim client As New Clients()
+        client.LoadClientsTables(DataGridViewClient, search.Text)
 
     End Sub
 End Class

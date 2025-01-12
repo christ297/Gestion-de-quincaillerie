@@ -1,7 +1,7 @@
 ﻿Public Class Form2
     Dim collapsed As Boolean = True
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -15,9 +15,10 @@
         countClient.Text = client.countClient()
 
         'dashboard informations
-        Dim countProduit As New products()
-        Dim counterProduit As Integer = countProduit.countProduits()
+        Dim produits As New products()
+        Dim counterProduit As Integer = produits.countProduits()
         countp.Text = counterProduit
+        produits.VoirSeuil(seuilvue)
 
 
         Dim compteAchat As New Achats()
@@ -25,6 +26,21 @@
         countA.Text = counterAchat
 
         restantStock.Text = counterProduit - counterAchat
+
+        If Convert.ToInt32(restantStock.Text) <= Convert.ToInt32(seuilvue.Text) Then
+            Dim produit As New products()
+            produit.sendMailAlerte()
+            MessageBox.Show("Seuil minimal atteint.", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+        End If
+
+        MessageBox.Show(Form1.roleUser)
+        If Form1.roleUser = "Caissiere" Then
+            resetAll.Enabled = False
+            seuilMinimal.Enabled = False
+            resetAll.BackColor = Color.Gray
+
+        End If
 
     End Sub
 
@@ -76,26 +92,27 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim produitView As New dashToProduits(Panel2, Form4)
+        Dim produitView As New dashToProduits(Panel2, New Form4())
         produitView.open1()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim achatView As New dashToAchats(Panel2, Form5)
+        Dim achatView As New dashToAchats(Panel2, New Form5())
         achatView.open1()
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim connection As New Connection(Panel1, Me)
-        connection.openForm2()
+        Dim connection As New Connect(Me, New Form2())
+        connection.open1()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-
+        Dim connection As New Connect(Me, New Form1())
+        connection.open1()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim home As New Home(Panel2, Form3)
+        Dim home As New Home(Panel2, New Form3())
         home.open1()
     End Sub
 
@@ -108,7 +125,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim home As New Facture(Panel2, Form6)
+        Dim home As New Facture(Panel2, New Form6())
         home.open1()
     End Sub
 
@@ -116,8 +133,19 @@
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Dim home As New Facture(Panel2, Form6)
-        home.open1()
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
+        Dim home As New Facture(Panel2, New Form6())
+        home.open1
+    End Sub
+
+    Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles seuilMinimal.Click
+        Dim produit As New products()
+        produit.UpdateSeuil(seuils.Text)
+        produit.VoirSeuil(seuilvue)
+    End Sub
+
+    Private Sub resetAll_Click(sender As Object, e As EventArgs) Handles resetAll.Click
+        Dim produit As New products()
+        produit.DeleteAll()
     End Sub
 End Class

@@ -11,6 +11,7 @@
     Public Sub open1()
 
         ' Configurer Form3 pour qu'il s'affiche sans bordure et qu'il soit non top-level
+
         mainForm.TopLevel = False
         mainForm.FormBorderStyle = FormBorderStyle.None
         mainForm.Dock = DockStyle.Fill ' Pour que Form3 remplisse entièrement Panel2
@@ -18,7 +19,8 @@
         ' Effacer uniquement les contrôles de Panel2, pas ceux de Form1
         mainPanel.Controls.Clear()
         ' Ajouter Form3 au Panel2 de Form1
-        mainPanel.Controls.Add(Form3)
+        mainPanel.Controls.Add(mainForm)
         mainForm.Show()
+
     End Sub
 End Class

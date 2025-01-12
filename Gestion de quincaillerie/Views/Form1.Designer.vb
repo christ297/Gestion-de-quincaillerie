@@ -34,7 +34,7 @@ Partial Class Form1
         Label3 = New Label()
         Panel1 = New Panel()
         Label4 = New Label()
-        ComboBox1 = New ComboBox()
+        role = New ComboBox()
         CheckBox1 = New CheckBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class Form1
         email.Location = New Point(1114, 241)
         email.Name = "email"
         email.PlaceholderText = "Entrer votre nom"
-        email.Size = New Size(354, 31)
+        email.Size = New Size(354, 27)
         email.TabIndex = 2
         ' 
         ' password
@@ -74,7 +74,7 @@ Partial Class Form1
         password.Location = New Point(1114, 431)
         password.Name = "password"
         password.PlaceholderText = "Entrer votre mot de passe"
-        password.Size = New Size(354, 31)
+        password.Size = New Size(354, 27)
         password.TabIndex = 3
         password.UseSystemPasswordChar = True
         ' 
@@ -84,7 +84,7 @@ Partial Class Form1
         Label1.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(1011, 241)
         Label1.Name = "Label1"
-        Label1.Size = New Size(54, 26)
+        Label1.Size = New Size(43, 22)
         Label1.TabIndex = 4
         Label1.Text = "Nom"
         ' 
@@ -94,7 +94,7 @@ Partial Class Form1
         Label2.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(900, 436)
         Label2.Name = "Label2"
-        Label2.Size = New Size(180, 26)
+        Label2.Size = New Size(142, 22)
         Label2.TabIndex = 5
         Label2.Text = "Mot de passe"
         ' 
@@ -104,7 +104,7 @@ Partial Class Form1
         Label3.Font = New Font("Lucida Sans Typewriter", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(1046, 95)
         Label3.Name = "Label3"
-        Label3.Size = New Size(422, 32)
+        Label3.Size = New Size(324, 25)
         Label3.TabIndex = 6
         Label3.Text = "Connexion Administrateur"
         ' 
@@ -112,7 +112,7 @@ Partial Class Form1
         ' 
         Panel1.BackColor = Color.White
         Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(ComboBox1)
+        Panel1.Controls.Add(role)
         Panel1.Controls.Add(CheckBox1)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(Label2)
@@ -132,34 +132,34 @@ Partial Class Form1
         Label4.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(1006, 342)
         Label4.Name = "Label4"
-        Label4.Size = New Size(59, 31)
+        Label4.Size = New Size(49, 25)
         Label4.TabIndex = 9
         Label4.Text = "Rôle"
         ' 
-        ' ComboBox1
+        ' role
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Directeur", "Caissière"})
-        ComboBox1.Location = New Point(1114, 342)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(354, 33)
-        ComboBox1.TabIndex = 8
+        role.FormattingEnabled = True
+        role.Items.AddRange(New Object() {"Directeur", "Caissiere"})
+        role.Location = New Point(1114, 342)
+        role.Name = "role"
+        role.Size = New Size(354, 27)
+        role.TabIndex = 8
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
         CheckBox1.Location = New Point(1290, 493)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(178, 29)
+        CheckBox1.Size = New Size(147, 24)
         CheckBox1.TabIndex = 7
         CheckBox1.Text = "Voir mot de passe"
         CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 19F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1924, 1033)
+        ClientSize = New Size(1540, 845)
         Controls.Add(Panel1)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
@@ -180,7 +180,7 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents role As ComboBox
     Friend WithEvents Label4 As Label
 
 End Class

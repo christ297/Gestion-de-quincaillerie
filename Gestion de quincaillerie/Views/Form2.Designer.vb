@@ -35,13 +35,17 @@ Partial Class Form2
         Button3 = New Button()
         dashboard = New Button()
         Panel2 = New Panel()
-        Button8 = New Button()
+        countp = New Label()
+        seuilMinimal = New Button()
+        resetAll = New Button()
+        seuils = New TextBox()
+        Label1 = New Label()
         Panel8 = New Panel()
         nombreClients = New Label()
         countClient = New Label()
         Panel7 = New Panel()
+        seuilvue = New Label()
         Label3 = New Label()
-        countp = New Label()
         Panel6 = New Panel()
         Label4 = New Label()
         restantStock = New Label()
@@ -66,9 +70,8 @@ Partial Class Form2
         Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Panel3)
         Panel1.Location = New Point(3, 0)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1199, 766)
+        Panel1.Size = New Size(1370, 1021)
         Panel1.TabIndex = 0
         ' 
         ' Panel4
@@ -79,12 +82,11 @@ Partial Class Form2
         Panel4.Controls.Add(Button7)
         Panel4.Controls.Add(outils)
         Panel4.Dock = DockStyle.Top
-        Panel4.Location = New Point(0, 224)
-        Panel4.Margin = New Padding(3, 2, 3, 2)
-        Panel4.MaximumSize = New Size(219, 224)
-        Panel4.MinimumSize = New Size(219, 49)
+        Panel4.Location = New Point(0, 299)
+        Panel4.MaximumSize = New Size(250, 299)
+        Panel4.MinimumSize = New Size(250, 65)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(219, 224)
+        Panel4.Size = New Size(250, 299)
         Panel4.TabIndex = 1
         ' 
         ' Button2
@@ -93,10 +95,9 @@ Partial Class Form2
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(0, 60)
-        Button2.Margin = New Padding(3, 2, 3, 2)
+        Button2.Location = New Point(0, 80)
         Button2.Name = "Button2"
-        Button2.Size = New Size(219, 29)
+        Button2.Size = New Size(250, 39)
         Button2.TabIndex = 3
         Button2.Text = "Tableau de bord"
         Button2.UseVisualStyleBackColor = False
@@ -107,10 +108,9 @@ Partial Class Form2
         Button6.FlatAppearance.BorderSize = 0
         Button6.FlatStyle = FlatStyle.Flat
         Button6.ForeColor = SystemColors.ControlLightLight
-        Button6.Location = New Point(0, 109)
-        Button6.Margin = New Padding(3, 2, 3, 2)
+        Button6.Location = New Point(0, 145)
         Button6.Name = "Button6"
-        Button6.Size = New Size(219, 29)
+        Button6.Size = New Size(250, 39)
         Button6.TabIndex = 2
         Button6.Text = "Factures"
         Button6.UseVisualStyleBackColor = False
@@ -121,10 +121,9 @@ Partial Class Form2
         Button7.FlatAppearance.BorderSize = 0
         Button7.FlatStyle = FlatStyle.Flat
         Button7.ForeColor = SystemColors.ControlLightLight
-        Button7.Location = New Point(0, 184)
-        Button7.Margin = New Padding(3, 2, 3, 2)
+        Button7.Location = New Point(0, 245)
         Button7.Name = "Button7"
-        Button7.Size = New Size(219, 29)
+        Button7.Size = New Size(250, 39)
         Button7.TabIndex = 1
         Button7.Text = "Se Déconnecter"
         Button7.UseVisualStyleBackColor = False
@@ -135,10 +134,9 @@ Partial Class Form2
         outils.FlatStyle = FlatStyle.Flat
         outils.ForeColor = SystemColors.ControlLightLight
         outils.ImageAlign = ContentAlignment.MiddleLeft
-        outils.Location = New Point(3, 2)
-        outils.Margin = New Padding(3, 2, 3, 2)
+        outils.Location = New Point(3, 3)
         outils.Name = "outils"
-        outils.Size = New Size(214, 39)
+        outils.Size = New Size(245, 52)
         outils.TabIndex = 0
         outils.Text = "Outils"
         outils.UseVisualStyleBackColor = True
@@ -152,11 +150,10 @@ Partial Class Form2
         Panel3.Controls.Add(dashboard)
         Panel3.Dock = DockStyle.Top
         Panel3.Location = New Point(0, 0)
-        Panel3.Margin = New Padding(3, 2, 3, 2)
-        Panel3.MaximumSize = New Size(219, 224)
-        Panel3.MinimumSize = New Size(219, 49)
+        Panel3.MaximumSize = New Size(250, 299)
+        Panel3.MinimumSize = New Size(250, 65)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(219, 224)
+        Panel3.Size = New Size(250, 299)
         Panel3.TabIndex = 0
         ' 
         ' Button5
@@ -165,10 +162,9 @@ Partial Class Form2
         Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = SystemColors.ControlLightLight
-        Button5.Location = New Point(0, 60)
-        Button5.Margin = New Padding(3, 2, 3, 2)
+        Button5.Location = New Point(0, 80)
         Button5.Name = "Button5"
-        Button5.Size = New Size(219, 29)
+        Button5.Size = New Size(250, 39)
         Button5.TabIndex = 3
         Button5.Text = "Clients"
         Button5.UseVisualStyleBackColor = False
@@ -179,10 +175,9 @@ Partial Class Form2
         Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ControlLightLight
-        Button4.Location = New Point(0, 109)
-        Button4.Margin = New Padding(3, 2, 3, 2)
+        Button4.Location = New Point(0, 145)
         Button4.Name = "Button4"
-        Button4.Size = New Size(219, 29)
+        Button4.Size = New Size(250, 39)
         Button4.TabIndex = 2
         Button4.Text = "Produits"
         Button4.UseVisualStyleBackColor = False
@@ -193,10 +188,9 @@ Partial Class Form2
         Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ControlLightLight
-        Button3.Location = New Point(0, 159)
-        Button3.Margin = New Padding(3, 2, 3, 2)
+        Button3.Location = New Point(0, 212)
         Button3.Name = "Button3"
-        Button3.Size = New Size(219, 29)
+        Button3.Size = New Size(250, 39)
         Button3.TabIndex = 1
         Button3.Text = "Achats"
         Button3.UseVisualStyleBackColor = False
@@ -208,10 +202,9 @@ Partial Class Form2
         dashboard.FlatStyle = FlatStyle.Flat
         dashboard.ForeColor = SystemColors.ControlLightLight
         dashboard.ImageAlign = ContentAlignment.MiddleLeft
-        dashboard.Location = New Point(3, 2)
-        dashboard.Margin = New Padding(3, 2, 3, 2)
+        dashboard.Location = New Point(3, 3)
         dashboard.Name = "dashboard"
-        dashboard.Size = New Size(214, 39)
+        dashboard.Size = New Size(245, 52)
         dashboard.TabIndex = 0
         dashboard.Text = "Menu"
         dashboard.UseVisualStyleBackColor = False
@@ -219,123 +212,164 @@ Partial Class Form2
         ' Panel2
         ' 
         Panel2.BackColor = SystemColors.ActiveBorder
-        Panel2.Controls.Add(Button8)
+        Panel2.Controls.Add(countp)
+        Panel2.Controls.Add(seuilMinimal)
+        Panel2.Controls.Add(resetAll)
+        Panel2.Controls.Add(seuils)
+        Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(Panel8)
         Panel2.Controls.Add(Panel7)
         Panel2.Controls.Add(Panel6)
         Panel2.Controls.Add(Panel5)
-        Panel2.Location = New Point(227, 0)
-        Panel2.Margin = New Padding(3, 2, 3, 2)
+        Panel2.Location = New Point(259, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1465, 766)
+        Panel2.Size = New Size(1674, 1021)
         Panel2.TabIndex = 1
         ' 
-        ' Button8
+        ' countp
         ' 
-        Button8.Location = New Point(92, 299)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(75, 23)
-        Button8.TabIndex = 4
-        Button8.Text = "Button8"
-        Button8.UseVisualStyleBackColor = True
+        countp.AutoSize = True
+        countp.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        countp.ForeColor = SystemColors.ButtonHighlight
+        countp.Location = New Point(912, 491)
+        countp.Name = "countp"
+        countp.Size = New Size(31, 38)
+        countp.TabIndex = 0
+        countp.Text = "L"
+        countp.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' seuilMinimal
+        ' 
+        seuilMinimal.BackColor = Color.DodgerBlue
+        seuilMinimal.ForeColor = SystemColors.ButtonHighlight
+        seuilMinimal.Location = New Point(219, 451)
+        seuilMinimal.Margin = New Padding(3, 4, 3, 4)
+        seuilMinimal.Name = "seuilMinimal"
+        seuilMinimal.Size = New Size(110, 45)
+        seuilMinimal.TabIndex = 10
+        seuilMinimal.Text = "Modifier"
+        seuilMinimal.UseVisualStyleBackColor = False
+        ' 
+        ' resetAll
+        ' 
+        resetAll.BackColor = Color.Red
+        resetAll.ForeColor = SystemColors.ButtonHighlight
+        resetAll.Location = New Point(1051, 676)
+        resetAll.Margin = New Padding(3, 4, 3, 4)
+        resetAll.Name = "resetAll"
+        resetAll.Size = New Size(216, 61)
+        resetAll.TabIndex = 8
+        resetAll.Text = "Réinitialiser Tout"
+        resetAll.UseVisualStyleBackColor = False
+        ' 
+        ' seuils
+        ' 
+        seuils.Location = New Point(215, 367)
+        seuils.Margin = New Padding(3, 4, 3, 4)
+        seuils.Name = "seuils"
+        seuils.Size = New Size(114, 27)
+        seuils.TabIndex = 6
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(55, 372)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(149, 20)
+        Label1.TabIndex = 5
+        Label1.Text = "Seuil Minimal  Stocks"
         ' 
         ' Panel8
         ' 
         Panel8.BackColor = Color.Brown
         Panel8.Controls.Add(nombreClients)
         Panel8.Controls.Add(countClient)
-        Panel8.Location = New Point(1025, 70)
-        Panel8.Margin = New Padding(3, 2, 3, 2)
+        Panel8.Location = New Point(1171, 93)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(276, 96)
+        Panel8.Size = New Size(315, 128)
         Panel8.TabIndex = 3
         ' 
         ' nombreClients
         ' 
         nombreClients.AutoSize = True
-        nombreClients.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        nombreClients.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         nombreClients.ForeColor = SystemColors.ButtonHighlight
-        nombreClients.Location = New Point(116, 8)
+        nombreClients.Location = New Point(133, 11)
         nombreClients.Name = "nombreClients"
-        nombreClients.Size = New Size(69, 25)
+        nombreClients.Size = New Size(83, 31)
         nombreClients.TabIndex = 1
         nombreClients.Text = "Clients"
         ' 
         ' countClient
         ' 
         countClient.AutoSize = True
-        countClient.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        countClient.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
         countClient.ForeColor = SystemColors.ButtonHighlight
-        countClient.Location = New Point(139, 39)
+        countClient.Location = New Point(159, 52)
         countClient.Name = "countClient"
-        countClient.Size = New Size(27, 30)
+        countClient.Size = New Size(34, 38)
         countClient.TabIndex = 0
         countClient.Text = "C"
         ' 
         ' Panel7
         ' 
         Panel7.BackColor = Color.Khaki
+        Panel7.Controls.Add(seuilvue)
         Panel7.Controls.Add(Label3)
-        Panel7.Controls.Add(countp)
-        Panel7.Location = New Point(698, 70)
-        Panel7.Margin = New Padding(3, 2, 3, 2)
+        Panel7.Location = New Point(798, 93)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(276, 96)
+        Panel7.Size = New Size(315, 128)
         Panel7.TabIndex = 2
+        ' 
+        ' seuilvue
+        ' 
+        seuilvue.AutoSize = True
+        seuilvue.Location = New Point(142, 72)
+        seuilvue.Name = "seuilvue"
+        seuilvue.Size = New Size(17, 20)
+        seuilvue.TabIndex = 11
+        seuilvue.Text = "0"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label3.ForeColor = SystemColors.ButtonHighlight
-        Label3.Location = New Point(24, 8)
+        Label3.Location = New Point(89, 23)
         Label3.Name = "Label3"
-        Label3.Size = New Size(222, 25)
+        Label3.Size = New Size(153, 31)
         Label3.TabIndex = 1
-        Label3.Text = " Produits Approvisionnés"
-        ' 
-        ' countp
-        ' 
-        countp.AutoSize = True
-        countp.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        countp.ForeColor = SystemColors.ButtonHighlight
-        countp.Location = New Point(133, 38)
-        countp.Name = "countp"
-        countp.Size = New Size(24, 30)
-        countp.TabIndex = 0
-        countp.Text = "L"
-        countp.TextAlign = ContentAlignment.MiddleCenter
+        Label3.Text = "Seuil Minimal"
         ' 
         ' Panel6
         ' 
         Panel6.BackColor = SystemColors.Highlight
         Panel6.Controls.Add(Label4)
         Panel6.Controls.Add(restantStock)
-        Panel6.Location = New Point(372, 70)
-        Panel6.Margin = New Padding(3, 2, 3, 2)
+        Panel6.Location = New Point(425, 93)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(276, 96)
+        Panel6.Size = New Size(315, 128)
         Panel6.TabIndex = 2
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label4.ForeColor = SystemColors.ButtonHighlight
-        Label4.Location = New Point(53, 8)
+        Label4.Location = New Point(61, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(165, 25)
+        Label4.Size = New Size(200, 31)
         Label4.TabIndex = 4
         Label4.Text = "Produits En Stocks"
         ' 
         ' restantStock
         ' 
         restantStock.AutoSize = True
-        restantStock.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        restantStock.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
         restantStock.ForeColor = SystemColors.ButtonHighlight
-        restantStock.Location = New Point(118, 39)
+        restantStock.Location = New Point(135, 52)
         restantStock.Name = "restantStock"
-        restantStock.Size = New Size(24, 30)
+        restantStock.Size = New Size(31, 38)
         restantStock.TabIndex = 0
         restantStock.Text = "L"
         ' 
@@ -344,31 +378,30 @@ Partial Class Form2
         Panel5.BackColor = Color.Green
         Panel5.Controls.Add(Label2)
         Panel5.Controls.Add(countA)
-        Panel5.Location = New Point(33, 70)
-        Panel5.Margin = New Padding(3, 2, 3, 2)
+        Panel5.Location = New Point(38, 93)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(276, 96)
+        Panel5.Size = New Size(315, 128)
         Panel5.TabIndex = 1
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
         Label2.ForeColor = SystemColors.ButtonFace
-        Label2.Location = New Point(49, 8)
+        Label2.Location = New Point(56, 11)
         Label2.Name = "Label2"
-        Label2.Size = New Size(153, 25)
+        Label2.Size = New Size(186, 31)
         Label2.TabIndex = 1
         Label2.Text = "Produits Achetés"
         ' 
         ' countA
         ' 
         countA.AutoSize = True
-        countA.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        countA.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
         countA.ForeColor = SystemColors.ButtonHighlight
-        countA.Location = New Point(119, 39)
+        countA.Location = New Point(136, 52)
         countA.Name = "countA"
-        countA.Size = New Size(24, 30)
+        countA.Size = New Size(31, 38)
         countA.TabIndex = 0
         countA.Text = "L"
         ' 
@@ -382,18 +415,18 @@ Partial Class Form2
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1348, 634)
+        ClientSize = New Size(1541, 845)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Form2"
         Text = "Form2"
         Panel1.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         Panel8.ResumeLayout(False)
         Panel8.PerformLayout()
         Panel7.ResumeLayout(False)
@@ -407,7 +440,6 @@ Partial Class Form2
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents dashboard As Button
@@ -432,5 +464,9 @@ Partial Class Form2
     Friend WithEvents Label4 As Label
     Friend WithEvents nombreClients As Label
     Friend WithEvents countClient As Label
-    Friend WithEvents Button8 As Button
+    Friend WithEvents seuils As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents resetAll As Button
+    Friend WithEvents seuilMinimal As Button
+    Friend WithEvents seuilvue As Label
 End Class

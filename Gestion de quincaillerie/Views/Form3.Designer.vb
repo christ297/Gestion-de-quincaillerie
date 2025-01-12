@@ -33,7 +33,7 @@ Partial Class Form3
         nomClient = New TextBox()
         DataGridViewClient = New DataGridView()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
+        search = New TextBox()
         Label1 = New Label()
         prenomsClient = New TextBox()
         pbxImage = New PictureBox()
@@ -58,7 +58,7 @@ Partial Class Form3
         Button3.Font = New Font("Segoe UI", 13.8F)
         Button3.Location = New Point(475, 709)
         Button3.Name = "Button3"
-        Button3.Size = New Size(148, 48)
+        Button3.Size = New Size(149, 48)
         Button3.TabIndex = 27
         Button3.Text = "Supprimer"
         Button3.UseVisualStyleBackColor = True
@@ -66,7 +66,7 @@ Partial Class Form3
         ' Button2
         ' 
         Button2.Font = New Font("Segoe UI", 13.8F)
-        Button2.Location = New Point(252, 709)
+        Button2.Location = New Point(251, 709)
         Button2.Name = "Button2"
         Button2.Size = New Size(154, 48)
         Button2.TabIndex = 26
@@ -78,7 +78,7 @@ Partial Class Form3
         Button1.Font = New Font("Segoe UI", 13.8F)
         Button1.Location = New Point(35, 709)
         Button1.Name = "Button1"
-        Button1.Size = New Size(156, 48)
+        Button1.Size = New Size(155, 48)
         Button1.TabIndex = 25
         Button1.Text = "Ajouter"
         Button1.UseVisualStyleBackColor = True
@@ -96,7 +96,7 @@ Partial Class Form3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(35, 490)
+        Label3.Location = New Point(35, 491)
         Label3.Name = "Label3"
         Label3.Size = New Size(103, 31)
         Label3.TabIndex = 23
@@ -106,7 +106,7 @@ Partial Class Form3
         ' 
         label.AutoSize = True
         label.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        label.Location = New Point(35, 402)
+        label.Location = New Point(35, 403)
         label.Name = "label"
         label.Size = New Size(64, 31)
         label.TabIndex = 22
@@ -136,29 +136,33 @@ Partial Class Form3
         DataGridViewClient.AllowUserToDeleteRows = False
         DataGridViewClient.AllowUserToResizeColumns = False
         DataGridViewClient.AllowUserToResizeRows = False
-        DataGridViewClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewClient.Location = New Point(676, 204)
+        DataGridViewClient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewClient.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewClient.ColumnHeadersHeight = 29
+        DataGridViewClient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewClient.Location = New Point(677, 204)
         DataGridViewClient.Name = "DataGridViewClient"
+        DataGridViewClient.RowHeadersVisible = False
         DataGridViewClient.RowHeadersWidth = 280
         DataGridViewClient.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewClient.Size = New Size(646, 553)
+        DataGridViewClient.Size = New Size(509, 487)
         DataGridViewClient.TabIndex = 19
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(1040, 30)
+        PictureBox1.Location = New Point(1040, 29)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(68, 32)
+        PictureBox1.Size = New Size(69, 32)
         PictureBox1.TabIndex = 18
         PictureBox1.TabStop = False
         ' 
-        ' TextBox1
+        ' search
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(371, 28)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(650, 34)
-        TextBox1.TabIndex = 17
+        search.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        search.Location = New Point(371, 28)
+        search.Name = "search"
+        search.Size = New Size(650, 34)
+        search.TabIndex = 17
         ' 
         ' Label1
         ' 
@@ -181,9 +185,9 @@ Partial Class Form3
         ' pbxImage
         ' 
         pbxImage.BorderStyle = BorderStyle.FixedSingle
-        pbxImage.Location = New Point(12, 110)
+        pbxImage.Location = New Point(11, 109)
         pbxImage.Name = "pbxImage"
-        pbxImage.Size = New Size(158, 171)
+        pbxImage.Size = New Size(157, 171)
         pbxImage.SizeMode = PictureBoxSizeMode.StretchImage
         pbxImage.TabIndex = 32
         pbxImage.TabStop = False
@@ -191,7 +195,7 @@ Partial Class Form3
         ' btnCharger
         ' 
         btnCharger.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnCharger.Location = New Point(12, 305)
+        btnCharger.Location = New Point(11, 305)
         btnCharger.Name = "btnCharger"
         btnCharger.Size = New Size(158, 40)
         btnCharger.TabIndex = 33
@@ -203,7 +207,7 @@ Partial Class Form3
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightGray
-        ClientSize = New Size(1497, 1055)
+        ClientSize = New Size(1497, 845)
         Controls.Add(btnCharger)
         Controls.Add(pbxImage)
         Controls.Add(prenomsClient)
@@ -218,7 +222,7 @@ Partial Class Form3
         Controls.Add(nomClient)
         Controls.Add(DataGridViewClient)
         Controls.Add(PictureBox1)
-        Controls.Add(TextBox1)
+        Controls.Add(search)
         Controls.Add(Label1)
         Name = "Form3"
         Text = "Form3"
@@ -239,7 +243,7 @@ Partial Class Form3
     Friend WithEvents nomClient As TextBox
     Friend WithEvents DataGridViewClient As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents search As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents prenomsClient As TextBox
     Friend WithEvents pbxImage As PictureBox

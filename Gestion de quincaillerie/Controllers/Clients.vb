@@ -109,26 +109,42 @@ Public Class Clients
         End Try
     End Sub
 
-    Public Sub LoadClientsTables(DataTableview As DataGridView)
+    Public Sub LoadClientsTables(DataTableview As DataGridView, Optional searchKeyword As String = "")
         Try
+            ' Obtenir la connexion à la base de données
             Dim connection As MySqlConnection = connect.OpenConnection()
+
+            ' Construire la requête SQL avec une clause WHERE pour la recherche
             Dim query As String = "SELECT * FROM client"
+            If Not String.IsNullOrWhiteSpace(searchKeyword) Then
+                query &= " WHERE numClient LIKE @search OR nomClient LIKE @search OR prenomsClient LIKE @search"
+            End If
+
+            ' Créer et paramétrer la commande
             Dim command As New MySqlCommand(query, connection)
+            If Not String.IsNullOrWhiteSpace(searchKeyword) Then
+                command.Parameters.AddWithValue("@search", "%" & searchKeyword & "%")
+            End If
+
+            ' Exécuter la commande et remplir le DataTable
             Dim data As New MySqlDataAdapter(command)
             Dim dataTable As New DataTable
             data.Fill(dataTable)
+
+            ' Lier les données au DataGridView
             DataTableview.DataSource = dataTable
 
-            ' Define column headers
-            DataTableview.Columns(0).HeaderText = "Libelle"
-            DataTableview.Columns(1).HeaderText = "Quantite"
-            DataTableview.Columns(2).HeaderText = "Prix"
+            ' Définir les en-têtes des colonnes si nécessaire
+            'DataTableview.Columns(0).HeaderText = "Libelle"
+            'DataTableview.Columns(1).HeaderText = "Quantite"
+            DataTableview.Columns(4).Visible = False
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
-
+            ' Afficher un message en cas d'erreur
+            MessageBox.Show("Erreur lors du chargement des données : " & ex.Message)
         End Try
     End Sub
+
     Public Function countClient()
         Dim query As String = "SELECT COUNT(*) FROM client"
         Dim count As Integer = 0
