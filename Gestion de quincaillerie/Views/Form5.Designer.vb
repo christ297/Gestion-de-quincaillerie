@@ -22,6 +22,7 @@ Partial Class Form5
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         libelleProductBox = New ComboBox()
         quantiteAchat = New NumericUpDown()
         Button3 = New Button()
@@ -31,7 +32,6 @@ Partial Class Form5
         Label2 = New Label()
         AchatsTableview = New DataGridView()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
         Label1 = New Label()
         nomClientBox = New ComboBox()
         Label4 = New Label()
@@ -62,36 +62,42 @@ Partial Class Form5
         ' 
         ' Button3
         ' 
+        Button3.BackColor = Color.Red
         Button3.Font = New Font("Segoe UI", 13.8F)
-        Button3.Location = New Point(556, 634)
+        Button3.ForeColor = SystemColors.ControlLightLight
+        Button3.Location = New Point(556, 627)
         Button3.Margin = New Padding(4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(204, 42)
+        Button3.Size = New Size(204, 49)
         Button3.TabIndex = 27
         Button3.Text = "Supprimer"
-        Button3.UseVisualStyleBackColor = True
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' Button2
         ' 
+        Button2.BackColor = Color.DarkOrange
         Button2.Font = New Font("Segoe UI", 13.8F)
+        Button2.ForeColor = SystemColors.ButtonFace
         Button2.Location = New Point(295, 627)
         Button2.Margin = New Padding(4)
         Button2.Name = "Button2"
         Button2.Size = New Size(212, 49)
         Button2.TabIndex = 26
         Button2.Text = "Modifier"
-        Button2.UseVisualStyleBackColor = True
+        Button2.UseVisualStyleBackColor = False
         ' 
         ' Button1
         ' 
+        Button1.BackColor = Color.Green
         Button1.Font = New Font("Segoe UI", 13.8F)
+        Button1.ForeColor = SystemColors.ControlLightLight
         Button1.Location = New Point(45, 627)
         Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
         Button1.Size = New Size(212, 49)
         Button1.TabIndex = 25
         Button1.Text = "Ajouter"
-        Button1.UseVisualStyleBackColor = True
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Label3
         ' 
@@ -127,9 +133,15 @@ Partial Class Form5
         AchatsTableview.EnableHeadersVisualStyles = False
         AchatsTableview.Location = New Point(791, 139)
         AchatsTableview.Margin = New Padding(4)
+        AchatsTableview.MultiSelect = False
         AchatsTableview.Name = "AchatsTableview"
+        AchatsTableview.ReadOnly = True
         AchatsTableview.RowHeadersVisible = False
         AchatsTableview.RowHeadersWidth = 280
+        AchatsTableview.ShowCellErrors = False
+        AchatsTableview.ShowCellToolTips = False
+        AchatsTableview.ShowEditingIcon = False
+        AchatsTableview.ShowRowErrors = False
         AchatsTableview.Size = New Size(646, 433)
         AchatsTableview.TabIndex = 19
         ' 
@@ -141,15 +153,6 @@ Partial Class Form5
         PictureBox1.Size = New Size(94, 45)
         PictureBox1.TabIndex = 18
         PictureBox1.TabStop = False
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(628, 43)
-        TextBox1.Margin = New Padding(4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(892, 34)
-        TextBox1.TabIndex = 17
         ' 
         ' Label1
         ' 
@@ -187,6 +190,9 @@ Partial Class Form5
         ' 
         AutoScaleDimensions = New SizeF(11F, 28F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1540, 845)
         Controls.Add(Label4)
         Controls.Add(nomClientBox)
@@ -199,7 +205,6 @@ Partial Class Form5
         Controls.Add(Label2)
         Controls.Add(AchatsTableview)
         Controls.Add(PictureBox1)
-        Controls.Add(TextBox1)
         Controls.Add(Label1)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(4)
@@ -221,7 +226,6 @@ Partial Class Form5
     Friend WithEvents Label2 As Label
     Friend WithEvents AchatsTableview As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents nomClientBox As ComboBox
     Friend WithEvents Label4 As Label

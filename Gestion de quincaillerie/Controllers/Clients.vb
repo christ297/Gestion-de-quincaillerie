@@ -135,7 +135,7 @@ Public Class Clients
             DataTableview.DataSource = dataTable
 
             ' Définir les en-têtes des colonnes si nécessaire
-            'DataTableview.Columns(0).HeaderText = "Libelle"
+            DataTableview.Columns(0).Visible = False
             'DataTableview.Columns(1).HeaderText = "Quantite"
             DataTableview.Columns(4).Visible = False
 

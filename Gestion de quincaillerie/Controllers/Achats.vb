@@ -1,7 +1,5 @@
-﻿Imports System.Net.Sockets
-Imports Gestion_de_quincaillerie.ConnexionToDb
+﻿Imports Gestion_de_quincaillerie.ConnexionToDb
 Imports MySql.Data.MySqlClient
-Imports Mysqlx.XDevAPI
 
 Public Class Achats
 

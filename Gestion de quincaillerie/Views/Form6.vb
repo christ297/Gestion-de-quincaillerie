@@ -1,9 +1,7 @@
-﻿Imports Gestion_de_quincaillerie.ConnexionToDb
+﻿Imports System.Drawing.Printing
+Imports System.IO
+Imports Gestion_de_quincaillerie.ConnexionToDb
 Imports MySql.Data.MySqlClient
-Imports Microsoft.Reporting.WinForms
-Imports System.Data
-Imports System.Drawing.Printing
-Imports Devart.Common
 
 
 Public Class Form6
@@ -55,53 +53,65 @@ Public Class Form6
     End Sub
 
     Private Sub PrintDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDoc.PrintPage
-        Dim yPos As Integer = 100 ' Position verticale initiale
-        Dim xPos As Integer = 50 ' Position horizontale initiale
-        Dim lineHeight As Integer = 30 ' Hauteur des lignes
-        Dim columnWidth As Integer = 150 ' Largeur des colonnes
-        Dim centerX As Integer = e.MarginBounds.Width / 2 ' Centre horizontal
-        Dim titleFont As New Font(printFont.FontFamily, 24, FontStyle.Bold) ' Police pour le titre
-        Dim headerFont As New Font(printFont.FontFamily, 12, FontStyle.Bold) ' Police pour les en-têtes
-        Dim footerFont As New Font(printFont.FontFamily, 10, FontStyle.Italic) ' Police pour le pied de page
-        Dim headerBrush As New SolidBrush(Color.DarkGreen) ' Couleur des en-têtes
-        Dim dataBrush As New SolidBrush(Color.Black) ' Couleur des données
-        Dim borderPen As New Pen(Color.Black, 1) ' Stylo pour les bordures
+        Dim yPos As Integer = 100
+        Dim xPos As Integer = 50
+        Dim lineHeight As Integer = 40
+        Dim columnWidth As Integer = 200
+        Dim centerX As Integer = e.MarginBounds.Width / 2
+        Dim titleFont As New Font("Arial", 24, FontStyle.Bold)
+        Dim headerFont As New Font("Arial", 12, FontStyle.Bold)
+        Dim dataFont As New Font("Arial", 10)
+        Dim footerFont As New Font("Arial", 10, FontStyle.Italic)
+        Dim headerBrush As New SolidBrush(Color.White)
+        Dim dataBrush As New SolidBrush(Color.Black)
+        Dim borderPen As New Pen(Color.Blue, 2)
+        Dim bgBrush As New SolidBrush(Color.Blue)
 
-        ' Dessiner le titre centré
+        ' Draw the title
         Dim title As String = "FACTURE QUINCAILLERIE"
         Dim titleWidth As Single = e.Graphics.MeasureString(title, titleFont).Width
-        e.Graphics.DrawString(title, titleFont, headerBrush, centerX - titleWidth / 2, yPos)
-        yPos += 50 ' Ajouter un espace après le titre
+        e.Graphics.DrawString(title, titleFont, New SolidBrush(Color.DarkBlue), centerX - titleWidth / 2, yPos)
+        yPos += 60
 
-        ' Dessiner les colonnes avec bordures
+        ' Draw table headers
         xPos = 50
-        For Each column As DataColumn In DataTable.Columns
-            e.Graphics.FillRectangle(New SolidBrush(Color.LightGray), xPos, yPos, columnWidth, lineHeight) ' Fond gris clair
-            e.Graphics.DrawRectangle(borderPen, xPos, yPos, columnWidth, lineHeight) ' Bordures
-            e.Graphics.DrawString(column.ColumnName, headerFont, headerBrush, xPos + 5, yPos + 5)
+        For Each column As DataColumn In dataTable.Columns
+            e.Graphics.FillRectangle(bgBrush, xPos, yPos, columnWidth, lineHeight)
+            e.Graphics.DrawRectangle(borderPen, xPos, yPos, columnWidth, lineHeight)
+            e.Graphics.DrawString(column.ColumnName, headerFont, headerBrush, xPos + 5, yPos + 10)
             xPos += columnWidth
         Next
-        yPos += lineHeight ' Passer à la ligne suivante
+        yPos += lineHeight
 
-        ' Dessiner les données avec des bordures
-        For Each row As DataRow In DataTable.Rows
-            xPos = 50 ' Réinitialiser la position horizontale
-            For Each column As DataColumn In DataTable.Columns
-                e.Graphics.DrawRectangle(borderPen, xPos, yPos, columnWidth, lineHeight) ' Bordures
-                e.Graphics.DrawString(row(column).ToString(), printFont, dataBrush, xPos + 5, yPos + 5)
+        ' Draw table rows
+        For Each row As DataRow In dataTable.Rows
+            xPos = 50
+            For Each column As DataColumn In dataTable.Columns
+                e.Graphics.DrawRectangle(borderPen, xPos, yPos, columnWidth, lineHeight)
+                e.Graphics.DrawString(row(column).ToString(), dataFont, dataBrush, xPos + 5, yPos + 10)
                 xPos += columnWidth
             Next
-            yPos += lineHeight ' Passer à la ligne suivante
+            yPos += lineHeight
         Next
 
-        ' Dessiner le message de remerciement en bas
+        ' Add a logo or an icon (retrieved from DB)
+        Dim connect As New connexion_db()
+        Dim connection As MySqlConnection = connect.OpenConnection()
+        Dim command As New MySqlCommand("SELECT photo FROM client WHERE idClient=@idClient", connection)
+        command.Parameters.AddWithValue("@idClient", idClient)
+
+        Dim photoPath As String = CType(command.ExecuteScalar(), String)
+        'connection.Close()
+
+        If Not String.IsNullOrEmpty(photoPath) AndAlso IO.File.Exists(photoPath) Then
+            Dim toolIcon As New Bitmap(photoPath)
+            e.Graphics.DrawImage(toolIcon, e.MarginBounds.Right - 100, 20, 80, 80)
+        End If
+
+        ' Draw footer
         Dim footer As String = "Merci pour votre fidélité !"
         Dim footerWidth As Single = e.Graphics.MeasureString(footer, footerFont).Width
-        e.Graphics.DrawString(footer, footerFont, dataBrush, centerX - footerWidth / 2, e.MarginBounds.Bottom - 450)
-
-        ' Ajouter un dessin ou une icône
-        Dim toolIcon As New Bitmap("C:\Users\KELI\source\repos\GK\Gestion de quincaillerie\Resources\left-arrow.png") ' Remplace par le chemin d'une icône
-        e.Graphics.DrawImage(toolIcon, e.MarginBounds.Right - 100, 20, 80, 80)
+        e.Graphics.DrawString(footer, footerFont, New SolidBrush(Color.DarkBlue), centerX - footerWidth / 2, e.MarginBounds.Bottom - 50)
     End Sub
 
 

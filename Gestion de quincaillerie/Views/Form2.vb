@@ -1,11 +1,28 @@
-﻿Public Class Form2
+﻿
+
+Public Class Form2
     Dim collapsed As Boolean = True
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
+
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Timer1.Start()
+        Timer2.Start()
+
+
+        ' Créer un contrôle CartesianChart
+
+
+
+
+
+
+
 
         Me.Size = New Size(800, 800)
 
@@ -34,17 +51,18 @@
 
         End If
 
-        MessageBox.Show(Form1.roleUser)
         If Form1.roleUser = "Caissiere" Then
             resetAll.Enabled = False
             seuilMinimal.Enabled = False
             resetAll.BackColor = Color.Gray
+            seuilMinimal.BackColor = Color.Gray
 
         End If
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
         If collapsed Then
             dashboard.Image = My.Resources.down_arrow
             Panel3.Height += 10
@@ -52,6 +70,7 @@
                 Timer1.Stop()
                 collapsed = False
             End If
+
         Else
             dashboard.Image = My.Resources.left_arrow1
             Panel3.Height -= 6
@@ -135,7 +154,7 @@
 
     Private Sub Button8_Click(sender As Object, e As EventArgs)
         Dim home As New Facture(Panel2, New Form6())
-        home.open1
+        home.open1()
     End Sub
 
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles seuilMinimal.Click

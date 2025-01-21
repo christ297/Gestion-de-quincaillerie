@@ -23,6 +23,7 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Panel1 = New Panel()
         Panel4 = New Panel()
         Button2 = New Button()
@@ -35,23 +36,27 @@ Partial Class Form2
         Button3 = New Button()
         dashboard = New Button()
         Panel2 = New Panel()
-        countp = New Label()
         seuilMinimal = New Button()
         resetAll = New Button()
         seuils = New TextBox()
         Label1 = New Label()
         Panel8 = New Panel()
+        Label8 = New Label()
         nombreClients = New Label()
         countClient = New Label()
         Panel7 = New Panel()
+        Label7 = New Label()
         seuilvue = New Label()
         Label3 = New Label()
         Panel6 = New Panel()
+        Label6 = New Label()
         Label4 = New Label()
         restantStock = New Label()
         Panel5 = New Panel()
+        Label5 = New Label()
         Label2 = New Label()
         countA = New Label()
+        countp = New Label()
         Timer1 = New Timer(components)
         Timer2 = New Timer(components)
         Panel1.SuspendLayout()
@@ -95,6 +100,8 @@ Partial Class Form2
         Button2.FlatAppearance.BorderSize = 0
         Button2.FlatStyle = FlatStyle.Flat
         Button2.ForeColor = SystemColors.ControlLightLight
+        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
+        Button2.ImageAlign = ContentAlignment.MiddleLeft
         Button2.Location = New Point(0, 80)
         Button2.Name = "Button2"
         Button2.Size = New Size(250, 39)
@@ -108,6 +115,8 @@ Partial Class Form2
         Button6.FlatAppearance.BorderSize = 0
         Button6.FlatStyle = FlatStyle.Flat
         Button6.ForeColor = SystemColors.ControlLightLight
+        Button6.Image = CType(resources.GetObject("Button6.Image"), Image)
+        Button6.ImageAlign = ContentAlignment.MiddleLeft
         Button6.Location = New Point(0, 145)
         Button6.Name = "Button6"
         Button6.Size = New Size(250, 39)
@@ -121,6 +130,8 @@ Partial Class Form2
         Button7.FlatAppearance.BorderSize = 0
         Button7.FlatStyle = FlatStyle.Flat
         Button7.ForeColor = SystemColors.ControlLightLight
+        Button7.Image = CType(resources.GetObject("Button7.Image"), Image)
+        Button7.ImageAlign = ContentAlignment.MiddleLeft
         Button7.Location = New Point(0, 245)
         Button7.Name = "Button7"
         Button7.Size = New Size(250, 39)
@@ -162,6 +173,8 @@ Partial Class Form2
         Button5.FlatAppearance.BorderSize = 0
         Button5.FlatStyle = FlatStyle.Flat
         Button5.ForeColor = SystemColors.ControlLightLight
+        Button5.Image = CType(resources.GetObject("Button5.Image"), Image)
+        Button5.ImageAlign = ContentAlignment.MiddleLeft
         Button5.Location = New Point(0, 80)
         Button5.Name = "Button5"
         Button5.Size = New Size(250, 39)
@@ -175,6 +188,8 @@ Partial Class Form2
         Button4.FlatAppearance.BorderSize = 0
         Button4.FlatStyle = FlatStyle.Flat
         Button4.ForeColor = SystemColors.ControlLightLight
+        Button4.Image = CType(resources.GetObject("Button4.Image"), Image)
+        Button4.ImageAlign = ContentAlignment.MiddleLeft
         Button4.Location = New Point(0, 145)
         Button4.Name = "Button4"
         Button4.Size = New Size(250, 39)
@@ -188,6 +203,8 @@ Partial Class Form2
         Button3.FlatAppearance.BorderSize = 0
         Button3.FlatStyle = FlatStyle.Flat
         Button3.ForeColor = SystemColors.ControlLightLight
+        Button3.Image = CType(resources.GetObject("Button3.Image"), Image)
+        Button3.ImageAlign = ContentAlignment.MiddleLeft
         Button3.Location = New Point(0, 212)
         Button3.Name = "Button3"
         Button3.Size = New Size(250, 39)
@@ -211,8 +228,9 @@ Partial Class Form2
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = SystemColors.ActiveBorder
-        Panel2.Controls.Add(countp)
+        Panel2.BackColor = SystemColors.ButtonHighlight
+        Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), Image)
+        Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(seuilMinimal)
         Panel2.Controls.Add(resetAll)
         Panel2.Controls.Add(seuils)
@@ -221,26 +239,15 @@ Partial Class Form2
         Panel2.Controls.Add(Panel7)
         Panel2.Controls.Add(Panel6)
         Panel2.Controls.Add(Panel5)
+        Panel2.Controls.Add(countp)
         Panel2.Location = New Point(259, 0)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1674, 1021)
         Panel2.TabIndex = 1
         ' 
-        ' countp
-        ' 
-        countp.AutoSize = True
-        countp.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
-        countp.ForeColor = SystemColors.ButtonHighlight
-        countp.Location = New Point(912, 491)
-        countp.Name = "countp"
-        countp.Size = New Size(31, 38)
-        countp.TabIndex = 0
-        countp.Text = "L"
-        countp.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' seuilMinimal
         ' 
-        seuilMinimal.BackColor = Color.DodgerBlue
+        seuilMinimal.BackColor = Color.DarkViolet
         seuilMinimal.ForeColor = SystemColors.ButtonHighlight
         seuilMinimal.Location = New Point(219, 451)
         seuilMinimal.Margin = New Padding(3, 4, 3, 4)
@@ -254,7 +261,7 @@ Partial Class Form2
         ' 
         resetAll.BackColor = Color.Red
         resetAll.ForeColor = SystemColors.ButtonHighlight
-        resetAll.Location = New Point(1051, 676)
+        resetAll.Location = New Point(824, 458)
         resetAll.Margin = New Padding(3, 4, 3, 4)
         resetAll.Name = "resetAll"
         resetAll.Size = New Size(216, 61)
@@ -282,6 +289,7 @@ Partial Class Form2
         ' Panel8
         ' 
         Panel8.BackColor = Color.Brown
+        Panel8.Controls.Add(Label8)
         Panel8.Controls.Add(nombreClients)
         Panel8.Controls.Add(countClient)
         Panel8.Location = New Point(1171, 93)
@@ -289,10 +297,22 @@ Partial Class Form2
         Panel8.Size = New Size(315, 128)
         Panel8.TabIndex = 3
         ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.Brown
+        Label8.Image = CType(resources.GetObject("Label8.Image"), Image)
+        Label8.Location = New Point(232, -25)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(62, 106)
+        Label8.TabIndex = 13
+        Label8.Text = "."
+        ' 
         ' nombreClients
         ' 
         nombreClients.AutoSize = True
-        nombreClients.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        nombreClients.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         nombreClients.ForeColor = SystemColors.ButtonHighlight
         nombreClients.Location = New Point(133, 11)
         nombreClients.Name = "nombreClients"
@@ -303,7 +323,7 @@ Partial Class Form2
         ' countClient
         ' 
         countClient.AutoSize = True
-        countClient.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        countClient.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         countClient.ForeColor = SystemColors.ButtonHighlight
         countClient.Location = New Point(159, 52)
         countClient.Name = "countClient"
@@ -313,7 +333,8 @@ Partial Class Form2
         ' 
         ' Panel7
         ' 
-        Panel7.BackColor = Color.Khaki
+        Panel7.BackColor = Color.DarkViolet
+        Panel7.Controls.Add(Label7)
         Panel7.Controls.Add(seuilvue)
         Panel7.Controls.Add(Label3)
         Panel7.Location = New Point(798, 93)
@@ -321,21 +342,35 @@ Partial Class Form2
         Panel7.Size = New Size(315, 128)
         Panel7.TabIndex = 2
         ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.DarkViolet
+        Label7.Image = CType(resources.GetObject("Label7.Image"), Image)
+        Label7.Location = New Point(248, -9)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(62, 106)
+        Label7.TabIndex = 12
+        Label7.Text = "."
+        ' 
         ' seuilvue
         ' 
         seuilvue.AutoSize = True
-        seuilvue.Location = New Point(142, 72)
+        seuilvue.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        seuilvue.ForeColor = SystemColors.ButtonFace
+        seuilvue.Location = New Point(142, 47)
         seuilvue.Name = "seuilvue"
-        seuilvue.Size = New Size(17, 20)
+        seuilvue.Size = New Size(33, 38)
         seuilvue.TabIndex = 11
         seuilvue.Text = "0"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label3.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ButtonHighlight
-        Label3.Location = New Point(89, 23)
+        Label3.Location = New Point(89, 11)
         Label3.Name = "Label3"
         Label3.Size = New Size(153, 31)
         Label3.TabIndex = 1
@@ -344,6 +379,7 @@ Partial Class Form2
         ' Panel6
         ' 
         Panel6.BackColor = SystemColors.Highlight
+        Panel6.Controls.Add(Label6)
         Panel6.Controls.Add(Label4)
         Panel6.Controls.Add(restantStock)
         Panel6.Location = New Point(425, 93)
@@ -351,10 +387,22 @@ Partial Class Form2
         Panel6.Size = New Size(315, 128)
         Panel6.TabIndex = 2
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = SystemColors.HotTrack
+        Label6.Image = CType(resources.GetObject("Label6.Image"), Image)
+        Label6.Location = New Point(250, -16)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(62, 106)
+        Label6.TabIndex = 5
+        Label6.Text = "."
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = SystemColors.ButtonHighlight
         Label4.Location = New Point(61, 11)
         Label4.Name = "Label4"
@@ -365,7 +413,7 @@ Partial Class Form2
         ' restantStock
         ' 
         restantStock.AutoSize = True
-        restantStock.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        restantStock.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         restantStock.ForeColor = SystemColors.ButtonHighlight
         restantStock.Location = New Point(135, 52)
         restantStock.Name = "restantStock"
@@ -376,6 +424,7 @@ Partial Class Form2
         ' Panel5
         ' 
         Panel5.BackColor = Color.Green
+        Panel5.Controls.Add(Label5)
         Panel5.Controls.Add(Label2)
         Panel5.Controls.Add(countA)
         Panel5.Location = New Point(38, 93)
@@ -383,10 +432,22 @@ Partial Class Form2
         Panel5.Size = New Size(315, 128)
         Panel5.TabIndex = 1
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.Green
+        Label5.Image = CType(resources.GetObject("Label5.Image"), Image)
+        Label5.Location = New Point(237, -16)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(62, 106)
+        Label5.TabIndex = 2
+        Label5.Text = "."
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonFace
         Label2.Location = New Point(56, 11)
         Label2.Name = "Label2"
@@ -397,13 +458,25 @@ Partial Class Form2
         ' countA
         ' 
         countA.AutoSize = True
-        countA.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        countA.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         countA.ForeColor = SystemColors.ButtonHighlight
         countA.Location = New Point(136, 52)
         countA.Name = "countA"
         countA.Size = New Size(31, 38)
         countA.TabIndex = 0
         countA.Text = "L"
+        ' 
+        ' countp
+        ' 
+        countp.AutoSize = True
+        countp.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        countp.ForeColor = SystemColors.ButtonHighlight
+        countp.Location = New Point(909, 458)
+        countp.Name = "countp"
+        countp.Size = New Size(31, 38)
+        countp.TabIndex = 0
+        countp.Text = "L"
+        countp.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Timer1
         ' 
@@ -417,7 +490,7 @@ Partial Class Form2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1541, 845)
+        ClientSize = New Size(1850, 845)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Name = "Form2"
@@ -469,4 +542,8 @@ Partial Class Form2
     Friend WithEvents resetAll As Button
     Friend WithEvents seuilMinimal As Button
     Friend WithEvents seuilvue As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
 End Class

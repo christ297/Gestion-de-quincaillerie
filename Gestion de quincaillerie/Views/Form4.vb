@@ -72,4 +72,8 @@
         produit.UpdateProduct(idProduit, libelleProduit.Text, prixProduit.Text, quantiteProduit.Text, typeProduit.Text)
         produit.LoadProduitsTables(DataGridViewProduit)
     End Sub
+
+    Private Sub prixProduit_TextChanged(sender As Object, e As EventArgs) Handles prixProduit.TextChanged
+
+    End Sub
 End Class

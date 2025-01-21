@@ -22,6 +22,7 @@ Partial Class Form4
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Label1 = New Label()
         searchBox = New TextBox()
         PictureBox1 = New PictureBox()
@@ -69,12 +70,21 @@ Partial Class Form4
         ' 
         ' DataGridViewProduit
         ' 
+        DataGridViewProduit.AllowUserToAddRows = False
+        DataGridViewProduit.AllowUserToDeleteRows = False
+        DataGridViewProduit.AllowUserToResizeColumns = False
+        DataGridViewProduit.AllowUserToResizeRows = False
         DataGridViewProduit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewProduit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewProduit.Location = New Point(683, 136)
         DataGridViewProduit.Name = "DataGridViewProduit"
+        DataGridViewProduit.ReadOnly = True
         DataGridViewProduit.RowHeadersVisible = False
         DataGridViewProduit.RowHeadersWidth = 280
+        DataGridViewProduit.ShowCellErrors = False
+        DataGridViewProduit.ShowCellToolTips = False
+        DataGridViewProduit.ShowEditingIcon = False
+        DataGridViewProduit.ShowRowErrors = False
         DataGridViewProduit.Size = New Size(577, 456)
         DataGridViewProduit.TabIndex = 3
         ' 
@@ -90,7 +100,7 @@ Partial Class Form4
         ' prixProduit
         ' 
         prixProduit.Font = New Font("Segoe UI", 12F)
-        prixProduit.Location = New Point(297, 451)
+        prixProduit.Location = New Point(314, 449)
         prixProduit.Name = "prixProduit"
         prixProduit.PlaceholderText = "Entrer le prix du produit"
         prixProduit.Size = New Size(277, 34)
@@ -128,38 +138,44 @@ Partial Class Form4
         ' 
         ' add
         ' 
+        add.BackColor = Color.Green
         add.Font = New Font("Segoe UI", 13.8F)
+        add.ForeColor = SystemColors.ButtonHighlight
         add.Location = New Point(48, 604)
         add.Name = "add"
         add.Size = New Size(155, 48)
         add.TabIndex = 10
         add.Text = "Ajouter"
-        add.UseVisualStyleBackColor = True
+        add.UseVisualStyleBackColor = False
         ' 
         ' update
         ' 
+        update.BackColor = Color.Orange
         update.Font = New Font("Segoe UI", 13.8F)
+        update.ForeColor = SystemColors.ButtonHighlight
         update.Location = New Point(261, 604)
         update.Name = "update"
         update.Size = New Size(154, 48)
         update.TabIndex = 11
         update.Text = "Modifier"
-        update.UseVisualStyleBackColor = True
+        update.UseVisualStyleBackColor = False
         ' 
         ' delete
         ' 
+        delete.BackColor = Color.Red
         delete.Font = New Font("Segoe UI", 13.8F)
+        delete.ForeColor = SystemColors.ButtonHighlight
         delete.Location = New Point(473, 604)
         delete.Name = "delete"
         delete.Size = New Size(149, 48)
         delete.TabIndex = 12
         delete.Text = "Supprimer"
-        delete.UseVisualStyleBackColor = True
+        delete.UseVisualStyleBackColor = False
         ' 
         ' quantiteProduit
         ' 
         quantiteProduit.Font = New Font("Segoe UI", 12F)
-        quantiteProduit.Location = New Point(315, 296)
+        quantiteProduit.Location = New Point(317, 253)
         quantiteProduit.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         quantiteProduit.Name = "quantiteProduit"
         quantiteProduit.Size = New Size(277, 34)
@@ -189,6 +205,9 @@ Partial Class Form4
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Zoom
         ClientSize = New Size(1435, 691)
         Controls.Add(typeProduit)
         Controls.Add(Label5)

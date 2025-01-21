@@ -42,10 +42,10 @@ Partial Class Form1
         ' 
         ' connecter
         ' 
-        connecter.BackColor = SystemColors.MenuHighlight
+        connecter.BackColor = Color.DodgerBlue
         connecter.Font = New Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         connecter.ForeColor = SystemColors.ButtonHighlight
-        connecter.Location = New Point(1141, 571)
+        connecter.Location = New Point(1134, 635)
         connecter.Name = "connecter"
         connecter.Size = New Size(255, 51)
         connecter.TabIndex = 0
@@ -57,24 +57,25 @@ Partial Class Form1
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.Location = New Point(11, 68)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(634, 718)
+        PictureBox1.Size = New Size(670, 718)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
         ' email
         ' 
-        email.Location = New Point(1114, 241)
+        email.Location = New Point(1099, 246)
         email.Name = "email"
         email.PlaceholderText = "Entrer votre nom"
-        email.Size = New Size(354, 27)
+        email.Size = New Size(354, 31)
         email.TabIndex = 2
         ' 
         ' password
         ' 
-        password.Location = New Point(1114, 431)
+        password.Location = New Point(1099, 489)
         password.Name = "password"
         password.PlaceholderText = "Entrer votre mot de passe"
-        password.Size = New Size(354, 27)
+        password.Size = New Size(354, 31)
         password.TabIndex = 3
         password.UseSystemPasswordChar = True
         ' 
@@ -82,9 +83,9 @@ Partial Class Form1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(1011, 241)
+        Label1.Location = New Point(977, 246)
         Label1.Name = "Label1"
-        Label1.Size = New Size(43, 22)
+        Label1.Size = New Size(54, 26)
         Label1.TabIndex = 4
         Label1.Text = "Nom"
         ' 
@@ -92,9 +93,9 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Lucida Sans Typewriter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(900, 436)
+        Label2.Location = New Point(885, 494)
         Label2.Name = "Label2"
-        Label2.Size = New Size(142, 22)
+        Label2.Size = New Size(180, 26)
         Label2.TabIndex = 5
         Label2.Text = "Mot de passe"
         ' 
@@ -104,12 +105,13 @@ Partial Class Form1
         Label3.Font = New Font("Lucida Sans Typewriter", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(1046, 95)
         Label3.Name = "Label3"
-        Label3.Size = New Size(324, 25)
+        Label3.Size = New Size(439, 32)
         Label3.TabIndex = 6
-        Label3.Text = "Connexion Administrateur"
+        Label3.Text = "Connexion à l'application"
         ' 
         ' Panel1
         ' 
+        Panel1.AutoSize = True
         Panel1.BackColor = Color.White
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(role)
@@ -121,18 +123,19 @@ Partial Class Form1
         Panel1.Controls.Add(connecter)
         Panel1.Controls.Add(email)
         Panel1.Controls.Add(password)
-        Panel1.Location = New Point(1, 0)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1960, 1080)
+        Panel1.Size = New Size(1540, 845)
         Panel1.TabIndex = 7
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(1006, 342)
+        Label4.Location = New Point(972, 360)
         Label4.Name = "Label4"
-        Label4.Size = New Size(49, 25)
+        Label4.Size = New Size(59, 31)
         Label4.TabIndex = 9
         Label4.Text = "Rôle"
         ' 
@@ -140,25 +143,26 @@ Partial Class Form1
         ' 
         role.FormattingEnabled = True
         role.Items.AddRange(New Object() {"Directeur", "Caissiere"})
-        role.Location = New Point(1114, 342)
+        role.Location = New Point(1099, 362)
         role.Name = "role"
-        role.Size = New Size(354, 27)
+        role.Size = New Size(354, 33)
         role.TabIndex = 8
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(1290, 493)
+        CheckBox1.Location = New Point(1275, 556)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(147, 24)
+        CheckBox1.Size = New Size(178, 29)
         CheckBox1.TabIndex = 7
         CheckBox1.Text = "Voir mot de passe"
         CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
         ClientSize = New Size(1540, 845)
         Controls.Add(Panel1)
         Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -169,6 +173,7 @@ Partial Class Form1
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents connecter As Button

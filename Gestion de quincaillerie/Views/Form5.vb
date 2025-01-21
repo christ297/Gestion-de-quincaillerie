@@ -1,9 +1,4 @@
-﻿Imports System.Diagnostics.Metrics
-Imports QuestPDF.Fluent
-Imports QuestPDF.Helpers
-Imports QuestPDF.Infrastructure
-
-Public Class Form5
+﻿Public Class Form5
     Public idAchat As Integer
     Public idProduit As Integer
     Public idClient As Integer

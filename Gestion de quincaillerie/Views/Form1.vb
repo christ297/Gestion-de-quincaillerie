@@ -1,6 +1,4 @@
-﻿Imports Microsoft.CodeAnalysis.VisualBasic.Syntax
-
-Public Class Form1
+﻿Public Class Form1
     Public Shared Property roleUser As String
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
@@ -10,7 +8,6 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles connecter.Click
         roleUser = role.Text
-        MessageBox.Show(roleUser)
 
 
         If Me.email.Text = "christ" And Me.password.Text = "christ" And role.Text = "Directeur" Then
@@ -69,6 +66,10 @@ Public Class Form1
     End Sub
 
     Private Sub role_SelectedIndexChanged(sender As Object, e As EventArgs) Handles role.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class
